@@ -1,5 +1,5 @@
 import { FileText, Rocket, UserCheck, Thermometer } from "lucide-react";
-import logoArtflowers from "@/assets/logo-artflowers.png";
+import logoArtflowers from "@/assets/logo-artflowers-blue.png";
 const ServicesBlack = () => {
   const services = [
     {

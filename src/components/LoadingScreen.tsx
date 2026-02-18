@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoArtflowers from '@/assets/logo-artflowers.png';
+import logoArtflowers from '@/assets/logo-artflowers-blue.png';
 
 const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);

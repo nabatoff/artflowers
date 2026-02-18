@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import logoArtflowers from '@/assets/logo-artflowers.png';
+import logoArtflowers from '@/assets/logo-artflowers-blue.png';
 
 const HeaderBlack = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
