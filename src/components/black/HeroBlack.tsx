@@ -54,7 +54,7 @@ const HeroBlack = () => {
           </p>
 
           {/* CTA Button */}
-          <Button onClick={() => scrollToSection("contact")} size="lg" className="bg-[#c41e3a] hover:bg-[#a01830] text-white uppercase tracking-wider text-sm md:text-base px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto">
+          <Button onClick={() => scrollToSection("contact")} size="lg" className="bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto">
             Оставить заявку
           </Button>
         </div>
