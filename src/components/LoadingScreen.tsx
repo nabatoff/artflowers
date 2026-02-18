@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import logoArttime from '@/assets/logo-arttime-white.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
@@ -39,7 +39,7 @@ const LoadingScreen = () => {
               transition={{ duration: 0.3 }}
               className="mb-6"
             >
-              <img src={logoArttime} alt="ArtTime" className="h-12 w-auto mx-auto" />
+              <img src={logoArtflowers} alt="Art Flowers" className="h-12 w-auto mx-auto" />
             </motion.div>
 
             {/* Progress Bar */}

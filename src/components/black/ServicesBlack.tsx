@@ -1,5 +1,5 @@
 import { FileText, Rocket, UserCheck, Thermometer } from "lucide-react";
-import logoArttime from "@/assets/logo-arttime-logistics.png";
+import logoArtflowers from "@/assets/logo-artflowers.png";
 const ServicesBlack = () => {
   const services = [
     {
@@ -34,7 +34,7 @@ const ServicesBlack = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-2 md:gap-3 lg:gap-4 mb-8 md:mb-12">
           {/* Logo like header */}
           <div className="flex items-center">
-            <img src={logoArttime} alt="Art Time Logistics" className="h-10 md:h-12 lg:h-14" />
+            <img src={logoArtflowers} alt="Art Flowers" className="h-10 md:h-12 lg:h-14" />
           </div>
 
           {/* Dash */}

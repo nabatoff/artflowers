@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
-import logoLabel from '@/assets/logo-label.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -12,8 +12,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6">
-              <img src={logoLabel} alt="ArtTime" className="h-6 sm:h-8 w-auto" />
-              <span className="text-lg sm:text-xl font-display font-bold">ArtTime</span>
+              <img src={logoArtflowers} alt="Art Flowers" className="h-6 sm:h-8 w-auto invert" />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4 sm:mb-6">
               {t.footer.description}

@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Language } from '@/lib/i18n';
-import logoLabel from '@/assets/logo-label.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const HeaderDark2 = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -56,8 +56,7 @@ const HeaderDark2 = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <img src={logoLabel} alt="ArtTime" className="h-8 w-auto" />
-              <span className="text-xl font-display font-bold text-foreground">ArtTime</span>
+              <img src={logoArtflowers} alt="Art Flowers" className="h-8 w-auto" />
             </div>
 
             {/* Desktop Navigation */}

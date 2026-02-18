@@ -3,8 +3,7 @@ import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import heroVideo from '@/assets/hero-truck.mp4';
-import labelRed from '@/assets/label-red.png';
-import logoBlack from '@/assets/logo-black-new.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -57,8 +56,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="flex items-center justify-center gap-2 sm:gap-3 mb-4 sm:mb-6"
           >
-            <img src={labelRed} alt="A" className="h-10 sm:h-12 md:h-16 w-auto" />
-            <img src={logoBlack} alt="ArtTime" className="h-6 sm:h-8 md:h-11 w-auto invert" />
+            <img src={logoArtflowers} alt="Art Flowers" className="h-8 sm:h-10 md:h-14 w-auto" />
           </motion.div>
 
           {/* Slogan */}

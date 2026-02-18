@@ -2,8 +2,7 @@ import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useLanguage } from '@/contexts/LanguageContext';
-import labelRed from '@/assets/label-red.png';
-import logoBlack from '@/assets/logo-black-new.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const FooterLight = () => {
   const { t } = useLanguage();
@@ -15,8 +14,7 @@ const FooterLight = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-6">
-              <img src={labelRed} alt="A" className="h-8 w-auto" />
-              <img src={logoBlack} alt="ArtTime" className="h-5 w-auto" />
+              <img src={logoArtflowers} alt="Art Flowers" className="h-6 w-auto invert" />
             </div>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
               {t.footer.description}

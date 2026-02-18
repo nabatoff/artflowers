@@ -4,8 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Language } from '@/lib/i18n';
-import labelRed from '@/assets/label-red.png';
-import logoBlack from '@/assets/logo-black-new.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const HeaderLight = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -65,8 +64,7 @@ const HeaderLight = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
             <div className="flex items-center gap-2">
-              <img src={labelRed} alt="A" className="h-8 w-auto" />
-              <img src={logoBlack} alt="ArtTime" className="h-5 w-auto" />
+              <img src={logoArtflowers} alt="Art Flowers" className="h-6 w-auto invert" />
             </div>
 
             {/* Desktop Navigation */}
