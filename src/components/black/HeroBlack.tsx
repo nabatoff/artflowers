@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import heroBg from "@/assets/hero-black-new.jpeg";
+
 const heroBgMobile = "/hero-mobile-black.jpeg";
 const HERO_VIDEO_SRC = "/Video-Project-1.webm";
 
@@ -28,8 +28,7 @@ const HeroBlack = () => {
         muted
         playsInline
         preload="metadata"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover"
-        poster={heroBg}>
+        className="hidden md:block absolute inset-0 w-full h-full object-cover">
 
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
