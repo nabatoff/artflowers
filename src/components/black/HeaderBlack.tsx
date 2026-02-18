@@ -6,8 +6,8 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog';
+  DialogTrigger } from
+'@/components/ui/dialog';
 import logoArttime from '@/assets/logo-arttime-logistics.png';
 
 const HeaderBlack = () => {
@@ -32,25 +32,25 @@ const HeaderBlack = () => {
   }];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#1a1a1a]/95 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-primary-foreground">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logoArttime} alt="Art Time Logistics" className="h-10 md:h-12 lg:h-14" />
+            <img alt="Art Time Logistics" className="h-10 md:h-12 lg:h-14" src="/lovable-uploads/fb1a2e5a-d135-43b6-b130-d07b21970da4.png" />
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            {navItems.map(item => (
-              <button 
-                key={item.id} 
-                onClick={() => scrollToSection(item.id)} 
-                className="text-xs font-medium text-gray-400 hover:text-white transition-colors tracking-wider"
-              >
+            {navItems.map((item) =>
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-xs font-medium text-gray-400 hover:text-white transition-colors tracking-wider">
+
                 {item.label}
               </button>
-            ))}
+            )}
           </nav>
 
           {/* Contact Button with Popup */}
@@ -83,12 +83,12 @@ const HeaderBlack = () => {
                   </div>
                   
                   {/* WhatsApp */}
-                  <a 
-                    href="https://wa.me/77077515144" 
-                    target="_blank" 
+                  <a
+                    href="https://wa.me/77077515144"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-[#2a2a2a] rounded-lg hover:bg-[#333] transition-colors"
-                  >
+                    className="flex items-center gap-4 p-4 bg-[#2a2a2a] rounded-lg hover:bg-[#333] transition-colors">
+
                     <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center">
                       <MessageCircle className="w-6 h-6 text-green-500" />
                     </div>
@@ -109,18 +109,18 @@ const HeaderBlack = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-800">
+        {isMenuOpen &&
+        <div className="md:hidden py-4 border-t border-gray-800">
             <nav className="flex flex-col gap-2">
-              {navItems.map(item => (
-                <button 
-                  key={item.id} 
-                  onClick={() => scrollToSection(item.id)} 
-                  className="text-left py-3 px-4 text-gray-300 hover:bg-gray-800 rounded-lg text-sm"
-                >
+              {navItems.map((item) =>
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-left py-3 px-4 text-gray-300 hover:bg-gray-800 rounded-lg text-sm">
+
                   {item.label}
                 </button>
-              ))}
+            )}
               <div className="flex flex-col gap-2 mt-2 mx-4">
                 <a href="tel:+77077515144" className="flex items-center gap-2 py-3 px-4 bg-[#2a2a2a] rounded-lg text-white">
                   <Phone className="w-4 h-4 text-[#c41e3a]" />
@@ -130,22 +130,22 @@ const HeaderBlack = () => {
                   <Phone className="w-4 h-4 text-[#c41e3a]" />
                   +7 (771) 525-70-82
                 </a>
-                <a 
-                  href="https://wa.me/77077515144" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 px-4 bg-green-600 hover:bg-green-700 rounded-lg text-white"
-                >
+                <a
+                href="https://wa.me/77077515144"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 py-3 px-4 bg-green-600 hover:bg-green-700 rounded-lg text-white">
+
                   <MessageCircle className="w-4 h-4" />
                   WhatsApp
                 </a>
               </div>
             </nav>
           </div>
-        )}
+        }
       </div>
-    </header>
-  );
+    </header>);
+
 };
 
 export default HeaderBlack;
