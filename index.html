@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5" />
+    <meta name="theme-color" content="#1a1a1a" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="ArtTime" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="ArtTime" />
+    <meta name="msapplication-TileColor" content="#C00D1E" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <title>ArtTime — Где важна надежность | Международные перевозки</title>
+    <meta name="description" content="ArtTime — транспортно-логистическая компания полного цикла с собственным автопарком рефрижераторов. Международные перевозки через 12+ стран.">
+    <meta name="author" content="ArtTime" />
+    <meta name="keywords" content="логистика, международные перевозки, рефрижераторные перевозки, грузоперевозки, транспортная компания, Казахстан, art-time, arttime">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+
+    <!-- Geo Tags для Казахстана -->
+    <meta name="geo.region" content="KZ" />
+    <meta name="geo.placename" content="Kazakhstan" />
+    <meta name="geo.position" content="51.1605;71.4704" />
+    <meta name="ICBM" content="51.1605, 71.4704" />
+
+    <!-- Canonical и Hreflang -->
+    <link rel="canonical" href="https://art-time.kz/" />
+    <link rel="alternate" hreflang="ru" href="https://art-time.kz/" />
+    <link rel="alternate" hreflang="en" href="https://art-time.kz/?lang=en" />
+    <link rel="alternate" hreflang="kk" href="https://art-time.kz/?lang=kz" />
+    <link rel="alternate" hreflang="x-default" href="https://art-time.kz/" />
+
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+    <link rel="apple-touch-icon" href="/favicon.png">
+    <link rel="mask-icon" href="/favicon.png" color="#C00D1E">
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:title" content="ArtTime — Где важна надежность | Международные перевозки">
+  <meta name="twitter:title" content="ArtTime — Где важна надежность | Международные перевозки">
+  <meta property="og:description" content="ArtTime — транспортно-логистическая компания полного цикла с собственным автопарком рефрижераторов. Международные перевозки через 12+ стран.">
+  <meta name="twitter:description" content="ArtTime — транспортно-логистическая компания полного цикла с собственным автопарком рефрижераторов. Международные перевозки через 12+ стран.">
+  <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/1bTQ6X783wOoZ4ZO5ugzCxuZXcD2/social-images/social-1769605074008-Take_the_truck_2k_202601281734.jpeg">
+  <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/1bTQ6X783wOoZ4ZO5ugzCxuZXcD2/social-images/social-1769605074008-Take_the_truck_2k_202601281734.jpeg">
+</head>
+
+  <body>
+    <div id="root"></div>
+    <script>
+      // Удаление service worker если он зарегистрирован
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          for(let registration of registrations) {
+            registration.unregister();
+          }
+        });
+        // Очистка кэша
+        if ('caches' in window) {
+          caches.keys().then(function(names) {
+            for (let name of names) {
+              caches.delete(name);
+            }
+          });
+        }
+      }
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
