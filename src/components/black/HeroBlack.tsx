@@ -43,9 +43,9 @@ const HeroBlack = () => {
         <div className="max-w-xl">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-            <span className="text-gray-400">ГДЕ ВАЖНА</span>
+            <span className="text-gray-400">Крупнейший</span>
             <br />
-            <span className="text-white">НАДЁЖНОСТЬ</span>
+            <span className="text-white">поставщик</span>
           </h1>
 
           {/* Subtitle */}
