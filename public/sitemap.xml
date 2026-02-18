@@ -12,23 +12,4 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://art-time.kz/light</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://art-time.kz/light"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://art-time.kz/light?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="kk" href="https://art-time.kz/light?lang=kz"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://art-time.kz/light"/>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://art-time.kz/dark2</loc>
-    <xhtml:link rel="alternate" hreflang="ru" href="https://art-time.kz/dark2"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://art-time.kz/dark2?lang=en"/>
-    <xhtml:link rel="alternate" hreflang="kk" href="https://art-time.kz/dark2?lang=kz"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://art-time.kz/dark2"/>
-    <lastmod>2025-01-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
 </urlset>
