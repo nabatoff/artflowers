@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-black-new.jpeg";
 const heroBgMobile = "/hero-mobile-black.jpeg";
+const HERO_VIDEO_SRC = "/Video-Project-1.webm";
 
 const HeroBlack = () => {
   const scrollToSection = (id: string) => {
@@ -14,25 +15,26 @@ const HeroBlack = () => {
   return <section className="relative h-screen md:min-h-screen flex items-center overflow-hidden pt-0 md:pt-16">
       {/* Background Image */}
       <div className="absolute inset-0 bg-[#1a1a1a]">
-        {/* Мобильное изображение */}
+        {/* Мобильное изображение (фоллбэк) */}
         <img 
           src={heroBgMobile} 
           alt="Art Time Logistics" 
           className="w-full h-full object-cover md:hidden" 
-          style={{
-            objectPosition: 'center center'
-          }}
+          style={{ objectPosition: 'center center' }}
         />
-        {/* Десктопное изображение */}
-        <img 
-          src={heroBg} 
-          alt="Art Time Logistics" 
-          className="hidden md:block w-full h-full object-cover" 
-          style={{
-            objectPosition: 'center center'
-          }}
-        />
-        {/* Dark overlay for text readability - усилен на мобильных */}
+        {/* Десктопное видео */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
+          poster={heroBg}
+        >
+          <source src={HERO_VIDEO_SRC} type="video/webm" />
+        </video>
+        {/* Dark overlay for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 md:from-[#1a1a1a]/80 via-[#1a1a1a]/50 md:via-[#1a1a1a]/40 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-[#1a1a1a]/80 md:to-[#1a1a1a]" />
       </div>
