@@ -31,17 +31,17 @@ const ContactBlack = () => {
                 <Input placeholder="Имя *" value={formData.name} onChange={e => setFormData({
                 ...formData,
                 name: e.target.value
-              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#c41e3a]" />
+              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB]" />
                 <Input placeholder="Телефон *" type="tel" value={formData.phone} onChange={e => setFormData({
                 ...formData,
                 phone: e.target.value
-              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#c41e3a]" />
+              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB]" />
               </div>
               <Textarea placeholder="Сообщение" value={formData.message} onChange={e => setFormData({
               ...formData,
               message: e.target.value
-            })} className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#c41e3a] min-h-[100px]" />
-              <Button type="submit" size="lg" className="w-full bg-[#c41e3a] hover:bg-[#a01830] text-white uppercase tracking-wider text-sm md:text-base py-5 md:py-6">
+            })} className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB] min-h-[100px]" />
+              <Button type="submit" size="lg" className="w-full bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base py-5 md:py-6">
                 Отправить заявку
               </Button>
             </form>
@@ -52,15 +52,15 @@ const ContactBlack = () => {
             <div className="space-y-6">
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#c41e3a]/20 flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-5 h-5 text-[#c41e3a]" />
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Телефон</p>
-                  <a href="tel:+77077515144" className="text-white hover:text-[#c41e3a] transition-colors block">
+                  <a href="tel:+77077515144" className="text-white hover:text-[#0047BB] transition-colors block">
                     +7 (707) 751-51-44
                   </a>
-                  <a href="tel:+77715257082" className="text-white hover:text-[#c41e3a] transition-colors block">
+                  <a href="tel:+77715257082" className="text-white hover:text-[#0047BB] transition-colors block">
                     +7 (771) 525-70-82
                   </a>
                 </div>
@@ -68,12 +68,12 @@ const ContactBlack = () => {
 
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#c41e3a]/20 flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-[#c41e3a]" />
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Почта</p>
-                  <a href="mailto:andreyyakovenko1603@mail.ru" className="text-white hover:text-[#c41e3a] transition-colors">
+                  <a href="mailto:andreyyakovenko1603@mail.ru" className="text-white hover:text-[#0047BB] transition-colors">
                     andrey@arttimelogistics.kz
                   </a>
                 </div>
@@ -81,8 +81,8 @@ const ContactBlack = () => {
 
               {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#c41e3a]/20 flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-5 h-5 text-[#c41e3a]" />
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Адрес</p>
