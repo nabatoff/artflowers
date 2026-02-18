@@ -16,21 +16,21 @@ const HeroBlack = () => {
       {/* Background Image */}
       <div className="absolute inset-0 bg-[#1a1a1a]">
         {/* Мобильное изображение (фоллбэк) */}
-        <img 
-          src={heroBgMobile} 
-          alt="Art Time Logistics" 
-          className="w-full h-full object-cover md:hidden" 
-          style={{ objectPosition: 'center center' }}
-        />
+        <img
+        src={heroBgMobile}
+        alt="Art Time Logistics"
+        className="w-full h-full object-cover md:hidden"
+        style={{ objectPosition: 'center center' }} />
+
         {/* Десктопное видео */}
         <video
-          autoPlay
-          muted
-          playsInline
-          preload="metadata"
-          className="hidden md:block absolute inset-0 w-full h-full object-cover"
-          poster={heroBg}
-        >
+        autoPlay
+        muted
+        playsInline
+        preload="metadata"
+        className="hidden md:block absolute inset-0 w-full h-full object-cover"
+        poster={heroBg}>
+
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
         {/* Dark overlay for text readability */}
@@ -43,14 +43,14 @@ const HeroBlack = () => {
         <div className="max-w-xl">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-            <span className="text-gray-400">ГДЕ ВАЖНА</span>
+            <span className="text-gray-400">​КРУПНЕЙШИЙ</span>
             <br />
-            <span className="text-white">НАДЁЖНОСТЬ</span>
+            <span className="text-white">ПОСТАВЩИК</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 md:mb-8">
-            Транспортно-логистическая компания полного цикла с собственным автопарком рефрижераторов.
+            свежесрезанных цветов и растений в Казахстане с собственной транспортно-логистической компанией.
           </p>
 
           {/* CTA Button */}
