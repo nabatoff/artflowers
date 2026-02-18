@@ -145,7 +145,7 @@ const HeaderLight = () => {
               <Button 
                 onClick={() => scrollToSection('contacts')}
                 size="sm"
-                className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(192,13,30,0.3)]"
+                className="bg-primary hover:bg-primary/90 shadow-[0_0_20px_rgba(0,71,187,0.3)]"
               >
                 {t.nav.getQuote}
               </Button>

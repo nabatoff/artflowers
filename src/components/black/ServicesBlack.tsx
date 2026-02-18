@@ -51,11 +51,11 @@ const ServicesBlack = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-[#383838] border border-gray-600 rounded-lg p-6 md:p-8 hover:border-[#c41e3a]/50 transition-all duration-300 flex flex-col"
+              className="bg-[#383838] border border-gray-600 rounded-lg p-6 md:p-8 hover:border-[#0047BB]/50 transition-all duration-300 flex flex-col"
             >
               {/* Icon */}
               <div className="mb-3 md:mb-4 flex justify-center">
-                <service.icon className="w-10 h-10 md:w-12 md:h-12 text-[#c41e3a]" strokeWidth={1.5} />
+                <service.icon className="w-10 h-10 md:w-12 md:h-12 text-[#0047BB]" strokeWidth={1.5} />
               </div>
 
               {/* Title */}
@@ -68,7 +68,7 @@ const ServicesBlack = () => {
               {service.highlight && (
                 <div className="flex justify-center mt-auto">
                   <span className="inline-flex items-center justify-center bg-black border border-gray-600 rounded-lg px-5 py-4 w-full max-w-[300px] md:max-w-[340px] min-h-[110px] md:min-h-[140px]">
-                    <p className="text-[#ff0033] font-bold text-base md:text-lg lg:text-xl uppercase tracking-wide text-center leading-tight break-words px-2">
+                    <p className="text-[#0047BB] font-bold text-base md:text-lg lg:text-xl uppercase tracking-wide text-center leading-tight break-words px-2">
                       {service.highlight}
                     </p>
                   </span>

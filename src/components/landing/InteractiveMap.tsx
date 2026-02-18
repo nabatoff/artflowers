@@ -78,7 +78,7 @@ const CountryMarker = ({ country, index, onHover, hoveredCountry }: CountryMarke
           className={`rounded-full transition-colors duration-200 ${
             isHovered ? 'bg-primary' : 'bg-primary/80'
           }`}
-          style={{ width: '12px', height: '12px', boxShadow: '0 0 10px rgba(192, 13, 30, 0.5)' }}
+          style={{ width: '12px', height: '12px', boxShadow: '0 0 10px rgba(0, 71, 187, 0.5)' }}
         />
       </motion.div>
 
