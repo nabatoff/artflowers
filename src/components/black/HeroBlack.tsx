@@ -43,14 +43,16 @@ const HeroBlack = () => {
         <div className="max-w-xl">
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-            <span className="text-gray-400">​КРУПНЕЙШИЙ</span>
+            <span className="text-gray-400">ГДЕ ВАЖНА</span>
             <br />
-            <span className="text-white">ПОСТАВЩИК</span>
+            <span className="text-white">НАДЁЖНОСТЬ</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-gray-400 text-sm sm:text-base md:text-lg mb-6 md:mb-8">
-            свежесрезанных цветов и растений в Казахстане с собственной транспортно-логистической компанией.
+            свежесрезанных цветов и растений в Казахстане 
+с собственной транспортно-логистической 
+компанией.
           </p>
 
           {/* CTA Button */}
@@ -59,6 +61,4 @@ const HeroBlack = () => {
           </Button>
         </div>
       </div>
-    </section>;
-};
-export default HeroBlack;
+    </section>;};export default HeroBlack;
