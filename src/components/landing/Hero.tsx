@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroVideo from '@/assets/hero-truck.mp4';
 import logoArtflowers from '@/assets/logo-artflowers.png';
+
+const HERO_VIDEO_SRC = '/Video-Project-1.webm';
 
 const Hero = () => {
   const { t } = useLanguage();
@@ -28,7 +29,7 @@ const Hero = () => {
           webkit-playsinline="true"
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src={heroVideo} type="video/mp4" />
+          <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
         {/* Red glow overlay at top */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/30 via-transparent to-transparent" />

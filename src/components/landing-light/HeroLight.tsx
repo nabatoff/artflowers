@@ -2,8 +2,9 @@ import { motion } from 'framer-motion';
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
-import heroTruck from '@/assets/33333333333333333.png';
 import logoArtflowers from '@/assets/logo-artflowers.png';
+
+const HERO_VIDEO_SRC = '/Video-Project-1.webm';
 
 const HeroLight = () => {
   const { t } = useLanguage();
@@ -111,7 +112,7 @@ const HeroLight = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right side - Truck image */}
+          {/* Right side - Video */}
           <motion.div
             initial={{ opacity: 0, x: 300, scale: 0.85 }}
             animate={{ opacity: 1, x: 0, scale: 1 }}
@@ -123,37 +124,20 @@ const HeroLight = () => {
               stiffness: 50,
               damping: 15
             }}
-            className="relative flex justify-center lg:justify-end items-center overflow-visible p-4"
+            className="relative flex justify-center lg:justify-end items-center overflow-hidden rounded-2xl p-4 w-full aspect-video lg:aspect-auto lg:h-[70vh]"
             style={{ perspective: '1000px' }}
           >
-            {/* Light effects from headlights */}
-            <motion.div
-              className="absolute inset-0 pointer-events-none"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.6 }}
-            >
-              <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-              <div className="absolute top-1/2 left-1/3 w-80 h-80 bg-primary/15 rounded-full blur-2xl -translate-x-1/2 -translate-y-1/2" />
-            </motion.div>
-            
-            <motion.img 
-              src={heroTruck} 
-              alt="ArtTime грузовик"
-              className="w-full lg:w-[180%] max-w-none h-auto object-contain lg:-mr-20 relative z-10"
-              style={{ 
-                filter: 'drop-shadow(0 10px 40px rgba(0, 0, 0, 0.1))',
-                transformStyle: 'preserve-3d',
-              }}
-              loading="eager"
+            <motion.video
+              src={HERO_VIDEO_SRC}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-xl relative z-10 shadow-xl"
+              style={{ filter: 'drop-shadow(0 10px 40px rgba(0, 0, 0, 0.1))' }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              whileHover={{ 
-                scale: 1.02,
-                rotateY: -5,
-                transition: { duration: 0.3 }
-              }}
             />
           </motion.div>
         </div>
