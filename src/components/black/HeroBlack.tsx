@@ -25,7 +25,6 @@ const HeroBlack = () => {
         {/* Десктопное видео */}
         <video
           autoPlay
-          loop
           muted
           playsInline
           preload="metadata"
