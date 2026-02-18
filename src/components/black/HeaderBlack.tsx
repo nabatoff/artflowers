@@ -8,7 +8,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog';
-import logoBlue from '@/assets/logo-artflowers-blue.png';
+import logoArtflowers from '@/assets/logo-artflowers.png';
 
 const HeaderBlack = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,7 +37,7 @@ const HeaderBlack = () => {
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logoBlue} alt="Art Flowers" className="h-10 md:h-12 lg:h-14" />
+            <img src={logoArtflowers} alt="Art Flowers" className="h-10 md:h-12 lg:h-14" />
           </div>
 
           {/* Desktop Navigation */}
