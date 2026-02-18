@@ -10,7 +10,7 @@ export const translations = {
       getQuote: 'Оставить заявку',
     },
     hero: {
-      slogan: 'Где важна надежность',
+      slogan: 'Крупнейший поставщик',
       subtitle: 'Транспортно-логистическая компания полного цикла с собственным автопарком рефрижераторов',
       mission: 'Обеспечиваем максимально надежную, быструю и безопасную международную доставку, контролируя каждый этап логистической цепочки.',
       calculateCost: 'Рассчитать стоимость',
@@ -119,7 +119,7 @@ export const translations = {
       getQuote: 'Get a Quote',
     },
     hero: {
-      slogan: 'Where Reliability Matters',
+      slogan: 'Largest supplier',
       subtitle: 'Full-cycle transport and logistics company with our own fleet of refrigerated trucks',
       mission: 'We provide the most reliable, fast and safe international delivery, controlling every stage of the logistics chain.',
       calculateCost: 'Calculate Cost',
@@ -228,7 +228,7 @@ export const translations = {
       getQuote: 'Өтінім қалдыру',
     },
     hero: {
-      slogan: 'Сенімділік маңызды жерде',
+      slogan: 'Ең ірі жеткізуші',
       subtitle: 'Өз рефрижератор автопаркі бар толық циклді көлік-логистикалық компания',
       mission: 'Біз логистикалық тізбектің әр кезеңін бақылай отырып, барынша сенімді, жылдам және қауіпсіз халықаралық жеткізуді қамтамасыз етеміз.',
       calculateCost: 'Құнын есептеу',
