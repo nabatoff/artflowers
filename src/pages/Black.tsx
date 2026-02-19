@@ -2,7 +2,10 @@ import { LanguageProvider } from '@/contexts/LanguageContext';
 import HeaderBlack from '@/components/black/HeaderBlack';
 import HeroBlack from '@/components/black/HeroBlack';
 import AboutBlack from '@/components/black/AboutBlack';
-import ContactBlack from '@/components/black/ContactBlack';
+import WhatWeOfferBlack from '@/components/black/WhatWeOfferBlack';
+import WhyTrustUsBlack from '@/components/black/WhyTrustUsBlack';
+import ContactsCitiesBlack from '@/components/black/ContactsCitiesBlack';
+import CooperationFormBlack from '@/components/black/CooperationFormBlack';
 import FooterBlack from '@/components/black/FooterBlack';
 import ScrollToTop from '@/components/ScrollToTop';
 import SEO from '@/components/SEO';
@@ -20,7 +23,10 @@ const Black = () => {
         <main>
           <HeroBlack />
           <AboutBlack />
-          <ContactBlack />
+          <WhatWeOfferBlack />
+          <WhyTrustUsBlack />
+          <ContactsCitiesBlack />
+          <CooperationFormBlack />
         </main>
         <FooterBlack />
         <ScrollToTop />

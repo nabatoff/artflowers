@@ -23,13 +23,12 @@ const HeaderBlack = () => {
     }
   };
 
-  const navItems = [{
-    id: 'services',
-    label: 'УСЛУГИ'
-  }, {
-    id: 'contact',
-    label: 'КОНТАКТЫ'
-  }];
+  const navItems = [
+    { id: 'about', label: 'О КОМПАНИИ' },
+    { id: 'offers', label: 'ЧТО ПРЕДЛАГАЕМ' },
+    { id: 'why-us', label: 'ПОЧЕМУ МЫ' },
+    { id: 'contacts', label: 'КОНТАКТЫ' },
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">

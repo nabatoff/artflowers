@@ -32,9 +32,6 @@ const HeroBlack = () => {
 
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 md:from-white/80 via-white/50 md:via-white/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/80 md:to-white" />
       </div>
 
       {/* Content */}
@@ -53,7 +50,7 @@ const HeroBlack = () => {
           </p>
 
           {/* CTA Button */}
-          <Button onClick={() => scrollToSection("contact")} size="lg" className="bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto">
+          <Button onClick={() => scrollToSection("cooperation")} size="lg" className="bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto">
             Оставить заявку
           </Button>
         </div>
