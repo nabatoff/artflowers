@@ -32,21 +32,26 @@ const HeroBlack = () => {
 
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
+        {/* Тёмный оверлей для читаемости текста */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 md:from-black/60 via-black/40 md:via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 md:to-black/80" />
       </div>
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 py-12 md:py-16">
         <div className="max-w-xl">
           {/* Main Headline */}
-           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6">
-            <span className="text-gray-500">Крупнейший</span>
+           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 text-white">
+            Крупнейший
             <br />
-            <span className="text-gray-900">поставщик</span>
+            поставщик
           </h1>
 
           {/* Subtitle */}
-          <p className="text-gray-600 text-sm sm:text-base md:text-lg mb-6 md:mb-8">
-            свежесрезанных цветов и растений в Казахстане | с собственной транспортно-логистической компанией.
+          <p className="text-white text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
+            свежесрезанных цветов и растений в Казахстане
+            <br />
+            с собственной транспортно-логистической компанией.
           </p>
 
           {/* CTA Button */}
