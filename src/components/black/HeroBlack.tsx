@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 
-const heroBgMobile = "/hero-mobile-black.jpeg";
 const HERO_VIDEO_SRC = "/Video-Project-1.webm";
 
 const HeroBlack = () => {
@@ -13,24 +12,17 @@ const HeroBlack = () => {
     }
   };
   return <section className="relative h-screen md:min-h-screen flex items-center overflow-hidden pt-0 md:pt-16">
-      {/* Background Image */}
+      {/* Background Video — мобильная и десктопная версия */}
       <div className="absolute inset-0 bg-white">
-        {/* Мобильное изображение (фоллбэк) */}
-        <img
-        src={heroBgMobile}
-        alt="Art Time Logistics"
-        className="w-full h-full object-cover md:hidden"
-        style={{ objectPosition: 'center center' }} />
-
-        {/* Десктопное видео */}
         <video
-        autoPlay
-        muted
-        playsInline
-        preload="metadata"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover"
-        style={{ objectPosition: '55% center' }}>
-
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ objectPosition: '55% center' }}
+        >
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
         {/* Тёмный оверлей для читаемости текста */}
