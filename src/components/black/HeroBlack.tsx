@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
-const HERO_VIDEO_SRC = "/Video-Project-1.webm";
+const HERO_VIDEO_MOBILE = "/Video-Project-2.webm";
+const HERO_VIDEO_DESKTOP = "/Video-Project-1.webm";
 
 const HeroBlack = () => {
   const scrollToSection = (id: string) => {
@@ -14,16 +15,28 @@ const HeroBlack = () => {
   return <section className="relative h-screen md:min-h-screen flex items-center overflow-hidden pt-0 md:pt-16">
       {/* Background Video — мобильная (уменьшено, без полос) и десктопная версия */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
+        {/* Мобильное видео */}
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-contain object-center md:object-cover"
+          className="absolute inset-0 w-full h-full object-contain object-center md:hidden"
+        >
+          <source src={HERO_VIDEO_MOBILE} type="video/webm" />
+        </video>
+        {/* Десктопное видео */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover hidden md:block"
           style={{ objectPosition: '55% center' }}
         >
-          <source src={HERO_VIDEO_SRC} type="video/webm" />
+          <source src={HERO_VIDEO_DESKTOP} type="video/webm" />
         </video>
         {/* Тёмный оверлей для читаемости текста */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 md:from-black/60 via-black/40 md:via-black/30 to-transparent" />
