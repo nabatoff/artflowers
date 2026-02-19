@@ -15,6 +15,3 @@ Allow: /
 
 User-agent: *
 Allow: /
-
-Host: https://art-time.kz
-Sitemap: https://art-time.kz/sitemap.xml
