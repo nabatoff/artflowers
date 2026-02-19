@@ -20,7 +20,7 @@ const HeroBlack = () => {
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover scale-[0.92] translate-x-[8%] md:scale-100 md:translate-x-0"
+          className="absolute inset-0 w-full min-w-full min-h-full object-cover scale-[1.2] translate-x-[6%] md:scale-100 md:translate-x-0 md:min-w-0 md:min-h-0"
           style={{ objectPosition: '55% center' }}
         >
           <source src={HERO_VIDEO_SRC} type="video/webm" />
