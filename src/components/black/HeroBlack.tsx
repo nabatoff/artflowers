@@ -12,15 +12,15 @@ const HeroBlack = () => {
     }
   };
   return <section className="relative h-screen md:min-h-screen flex items-center overflow-hidden pt-0 md:pt-16">
-      {/* Background Video — мобильная и десктопная версия */}
-      <div className="absolute inset-0 bg-white">
+      {/* Background Video — мобильная (уменьшено, без полос) и десктопная версия */}
+      <div className="absolute inset-0 bg-[#0a0f1a]">
         <video
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full min-w-full min-h-full object-cover scale-[1.2] translate-x-[6%] md:scale-100 md:translate-x-0 md:min-w-0 md:min-h-0"
+          className="absolute inset-0 w-full h-full object-contain object-center md:object-cover"
           style={{ objectPosition: '55% center' }}
         >
           <source src={HERO_VIDEO_SRC} type="video/webm" />
