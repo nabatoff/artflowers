@@ -1,13 +1,16 @@
-import { Phone, MapPin, Mail } from "lucide-react";
+import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const ContactsCitiesBlack = () => {
   const cities = [
-    { city: "Алматы", phone: "+7 (707) 751-51-44", address: "ул. Мынбаева 151" },
-    { city: "Астана", phone: "+7 (771) 525-70-82", address: "" },
-    { city: "Шымкент", phone: "+7 (707) 751-51-44", address: "" },
+    { city: "Алматы", address: "6-й микрорайон, 11", phone: "+7 (771) 751-51-41", whatsapp: "77717515141" },
+    { city: "Уральск", address: "ул. Сырыма Датова 3/5", phone: "+7 (771) 020-00-99", whatsapp: "77710200099" },
+    { city: "Астана", address: "пр. Тауелсиздик 19", phone: "+7 (705) 720-55-33", whatsapp: "77057205533" },
+    { city: "Усть-Каменогорск", address: "пр. Шакарима 24", phone: "+7 (708) 803-01-95", whatsapp: "77088030195" },
+    { city: "Актау", address: "28 микрорайон, 54", phone: "+7 (701) 420-08-58", whatsapp: "77014200858" },
   ];
 
-  const instagramHandle = "artflowers.kz";
+  const instagramUrl = "https://www.instagram.com/artflowers.kazakhstan/";
   const email = "andreyyakovenko1603@mail.ru";
   const emailDisplay = "andrey@arttimelogistics.kz";
 
@@ -20,23 +23,9 @@ const ContactsCitiesBlack = () => {
           </h2>
         </div>
 
-        {/* Основные контакты (из старого блока) */}
+        {/* Общие контакты */}
         <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-sm mb-8 md:mb-10 max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#0047BB]/15 flex items-center justify-center flex-shrink-0">
-                <Phone className="w-5 h-5 text-[#0047BB]" />
-              </div>
-              <div>
-                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Телефон</p>
-                <a href="tel:+77077515144" className="text-[#0047BB] font-semibold hover:underline block">
-                  +7 (707) 751-51-44
-                </a>
-                <a href="tel:+77715257082" className="text-[#0047BB] font-semibold hover:underline block">
-                  +7 (771) 525-70-82
-                </a>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             <div className="flex items-start gap-3">
               <div className="w-10 h-10 rounded-full bg-[#0047BB]/15 flex items-center justify-center flex-shrink-0">
                 <Mail className="w-5 h-5 text-[#0047BB]" />
@@ -53,34 +42,47 @@ const ContactsCitiesBlack = () => {
                 <MapPin className="w-5 h-5 text-[#0047BB]" />
               </div>
               <div>
-                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Адрес</p>
-                <p className="text-gray-900 font-medium">г. Алматы, ул. Мынбаева 151</p>
+                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Главный офис</p>
+                <p className="text-gray-900 font-medium">Алматы, 6-й микрорайон, 11</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* По городам */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
+        {/* По городам с кнопкой WhatsApp */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
           {cities.map((item, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-6 border-2 border-[#0047BB]/20 shadow-sm hover:border-[#0047BB]/40 transition-colors"
+              className="bg-white rounded-xl p-6 border-2 border-[#0047BB]/20 shadow-sm hover:border-[#0047BB]/40 transition-colors flex flex-col"
             >
               <h3 className="text-lg font-bold text-[#0047BB] mb-3">{item.city}</h3>
+              <div className="flex items-start gap-2 text-gray-700 mb-2">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#0047BB]" />
+                <span>{item.address}</span>
+              </div>
               <a
-                href={`tel:${item.phone.replace(/\s|\(|\)|-/g, "")}`}
-                className="flex items-center gap-2 text-[#0047BB] font-medium hover:underline transition-colors mb-2"
+                href={`tel:${item.whatsapp}`}
+                className="flex items-center gap-2 text-[#0047BB] font-medium hover:underline transition-colors mb-4"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>{item.phone}</span>
               </a>
-              {item.address && (
-                <div className="flex items-start gap-2 text-gray-600">
-                  <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#0047BB]" />
-                  <span>{item.address}</span>
-                </div>
-              )}
+              <a
+                href={`https://wa.me/${item.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto"
+              >
+                <Button
+                  type="button"
+                  size="sm"
+                  className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white gap-2"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  WhatsApp
+                </Button>
+              </a>
             </div>
           ))}
         </div>
@@ -89,12 +91,12 @@ const ContactsCitiesBlack = () => {
         <div className="text-center">
           <p className="text-gray-600 text-sm mb-2">Мы в соцсетях</p>
           <a
-            href={`https://instagram.com/${instagramHandle}`}
+            href={instagramUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[#0047BB] font-bold text-lg hover:underline"
           >
-            @{instagramHandle}
+            @artflowers.kazakhstan
           </a>
         </div>
       </div>
