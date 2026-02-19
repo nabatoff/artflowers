@@ -28,7 +28,8 @@ const HeroBlack = () => {
         muted
         playsInline
         preload="metadata"
-        className="hidden md:block absolute inset-0 w-full h-full object-cover">
+        className="hidden md:block absolute inset-0 w-full h-full object-cover"
+        style={{ objectPosition: '55% center' }}>
 
           <source src={HERO_VIDEO_SRC} type="video/webm" />
         </video>
