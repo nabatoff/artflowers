@@ -11,7 +11,7 @@ const FooterBlack = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center sm:text-left">
-              Art Time Logistics © 2024. Все права защищены.
+              Artflowers © 2024. Все права защищены.
             </p>
             <button
               onClick={() => setIsOfferOpen(true)}
