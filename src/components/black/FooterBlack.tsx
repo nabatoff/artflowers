@@ -7,7 +7,7 @@ const FooterBlack = () => {
 
   return (
     <>
-      <footer className="py-6 border-t border-gray-800 bg-[#1a1a1a]">
+      <footer className="py-6 border-t border-gray-200 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm text-center sm:text-left">
@@ -15,7 +15,7 @@ const FooterBlack = () => {
             </p>
             <button
               onClick={() => setIsOfferOpen(true)}
-              className="text-gray-500 hover:text-white transition-colors text-sm"
+              className="text-gray-500 hover:text-gray-900 transition-colors text-sm"
             >
               Публичная оферта
             </button>
@@ -24,19 +24,19 @@ const FooterBlack = () => {
       </footer>
 
       <Dialog open={isOfferOpen} onOpenChange={setIsOfferOpen}>
-        <DialogContent className="max-w-3xl max-h-[80vh] bg-[#1a1a1a] border-gray-800 text-white">
+        <DialogContent className="max-w-3xl max-h-[80vh] bg-white border-gray-200 text-gray-900">
           <DialogHeader>
-            <DialogTitle className="text-xl font-bold text-white">Публичная оферта</DialogTitle>
+            <DialogTitle className="text-xl font-bold text-gray-900">Публичная оферта</DialogTitle>
           </DialogHeader>
           <ScrollArea className="h-[60vh] pr-4">
-            <div className="space-y-4 text-gray-300 text-sm leading-relaxed">
+            <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
               <p>
                 Настоящий Договор публичной оферты (далее – Оферта) адресован физическим и юридическим лицам (далее –
                 Покупатель) и определяет условия оказания услуг, представленных на сайтах https://art-time.kz и
                 https://arttimekz.com (далее – Сайт).
               </p>
 
-              <h3 className="text-white font-semibold pt-2">1. Общие положения</h3>
+              <h3 className="text-gray-900 font-semibold pt-2">1. Общие положения</h3>
               <p>
                 1.1. Данная Оферта является публичным договором в соответствии со статьей 395 Гражданского кодекса
                 Республики Казахстан.
@@ -55,7 +55,7 @@ const FooterBlack = () => {
                 и/или произведения оплаты Заказчик считается согласившимся со всеми условиями Оферты.
               </p>
 
-              <h3 className="text-white font-semibold pt-2">2. Порядок оформления заказа</h3>
+              <h3 className="text-gray-900 font-semibold pt-2">2. Порядок оформления заказа</h3>
               <p>
                 2.1. Информация об услугах на Сайте носит ознакомительный характер. Перечень, объем, технические
                 характеристики, сроки оказания услуг и их итоговая стоимость согласовываются Сторонами индивидуально в
@@ -66,13 +66,13 @@ const FooterBlack = () => {
                 оплаты/предоплаты.
               </p>
 
-              <h3 className="text-white font-semibold pt-2">3. Ответственность и персональные данные</h3>
+              <h3 className="text-gray-900 font-semibold pt-2">3. Ответственность и персональные данные</h3>
               <p>
                 3.1. Оставляя заявку на Сайте или в мессенджере, Покупатель дает согласие на обработку персональных
                 данных для исполнения Заказа.
               </p>
 
-              <h3 className="text-white font-semibold pt-2">4. Контакты</h3>
+              <h3 className="text-gray-900 font-semibold pt-2">4. Контакты</h3>
               <p>
                 4.1. По всем вопросам, жалобам и предложениям обращаться по электронной почте:
                 andrey@arttimelogistics.kz

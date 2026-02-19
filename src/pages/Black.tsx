@@ -1,7 +1,7 @@
 import { LanguageProvider } from '@/contexts/LanguageContext';
 import HeaderBlack from '@/components/black/HeaderBlack';
 import HeroBlack from '@/components/black/HeroBlack';
-import ServicesBlack from '@/components/black/ServicesBlack';
+import AboutBlack from '@/components/black/AboutBlack';
 import ContactBlack from '@/components/black/ContactBlack';
 import FooterBlack from '@/components/black/FooterBlack';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -15,11 +15,11 @@ const Black = () => {
         description="Your Global Shipments, Perfected. Professional logistics services including air freight, ocean cargo, and road transport."
         canonical="/"
       />
-      <div className="min-h-screen bg-[#1a1a1a]">
+      <div className="min-h-screen bg-white">
         <HeaderBlack />
         <main>
           <HeroBlack />
-          <ServicesBlack />
+          <AboutBlack />
           <ContactBlack />
         </main>
         <FooterBlack />

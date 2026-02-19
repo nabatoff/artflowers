@@ -17,12 +17,12 @@ const ContactBlack = () => {
     const whatsappMessage = `Имя: ${encodeURIComponent(formData.name)}%0AТелефон: ${encodeURIComponent(formData.phone)}%0AСообщение: ${encodeURIComponent(formData.message)}`;
     window.open(`https://wa.me/77077515144?text=${whatsappMessage}`, '_blank');
   };
-  return <section id="contact" className="py-12 md:py-16 bg-[#242424]">
+  return <section id="contact" className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {/* Contact Form */}
-          <div className="bg-[#383838] border border-gray-600 rounded-lg p-4 md:p-6">
-            <h2 className="text-lg md:text-xl font-bold text-gray-200 uppercase tracking-wide mb-4 md:mb-6">
+          <div className="bg-white border border-gray-200 rounded-lg p-4 md:p-6 shadow-sm">
+            <h2 className="text-lg md:text-xl font-bold text-gray-900 uppercase tracking-wide mb-4 md:mb-6">
               Свяжитесь с нами
             </h2>
             
@@ -31,16 +31,16 @@ const ContactBlack = () => {
                 <Input placeholder="Имя *" value={formData.name} onChange={e => setFormData({
                 ...formData,
                 name: e.target.value
-              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB]" />
+              })} required className="bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB]" />
                 <Input placeholder="Телефон *" type="tel" value={formData.phone} onChange={e => setFormData({
                 ...formData,
                 phone: e.target.value
-              })} required className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB]" />
+              })} required className="bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB]" />
               </div>
               <Textarea placeholder="Сообщение" value={formData.message} onChange={e => setFormData({
               ...formData,
               message: e.target.value
-            })} className="bg-[#2a2a2a] border-gray-600 text-white placeholder:text-gray-500 focus:border-[#0047BB] min-h-[100px]" />
+            })} className="bg-gray-50 border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] min-h-[100px]" />
               <Button type="submit" size="lg" className="w-full bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base py-5 md:py-6">
                 Отправить заявку
               </Button>
@@ -48,19 +48,19 @@ const ContactBlack = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="bg-[#383838] border border-gray-600 rounded-lg p-4 md:p-6 flex flex-col justify-center">
+          <div className="bg-white border border-gray-200 rounded-lg p-4 md:p-6 flex flex-col justify-center shadow-sm">
             <div className="space-y-6">
               {/* Phone */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/10 flex items-center justify-center flex-shrink-0">
                   <Phone className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Телефон</p>
-                  <a href="tel:+77077515144" className="text-white hover:text-[#0047BB] transition-colors block">
+                  <a href="tel:+77077515144" className="text-gray-900 hover:text-[#0047BB] transition-colors block">
                     +7 (707) 751-51-44
                   </a>
-                  <a href="tel:+77715257082" className="text-white hover:text-[#0047BB] transition-colors block">
+                  <a href="tel:+77715257082" className="text-gray-900 hover:text-[#0047BB] transition-colors block">
                     +7 (771) 525-70-82
                   </a>
                 </div>
@@ -68,12 +68,12 @@ const ContactBlack = () => {
 
               {/* Email */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/10 flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Почта</p>
-                  <a href="mailto:andreyyakovenko1603@mail.ru" className="text-white hover:text-[#0047BB] transition-colors">
+                  <a href="mailto:andreyyakovenko1603@mail.ru" className="text-gray-900 hover:text-[#0047BB] transition-colors">
                     andrey@arttimelogistics.kz
                   </a>
                 </div>
@@ -81,12 +81,12 @@ const ContactBlack = () => {
 
               {/* Address */}
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-[#0047BB]/20 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-full bg-[#0047BB]/10 flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-5 h-5 text-[#0047BB]" />
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Адрес</p>
-                  <p className="text-white">г. Алматы, ул. Мынбаева 151</p>
+                  <p className="text-gray-900">г. Алматы, ул. Мынбаева 151</p>
                 </div>
               </div>
             </div>
