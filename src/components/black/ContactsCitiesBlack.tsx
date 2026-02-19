@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail, MessageCircle } from "lucide-react";
+import { Phone, MapPin, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const ContactsCitiesBlack = () => {
@@ -11,8 +11,7 @@ const ContactsCitiesBlack = () => {
   ];
 
   const instagramUrl = "https://www.instagram.com/artflowers.kazakhstan/";
-  const email = "andreyyakovenko1603@mail.ru";
-  const emailDisplay = "andrey@arttimelogistics.kz";
+  const whatsappGeneral = "77717515141";
 
   return (
     <section id="contacts" className="py-12 md:py-20 bg-gray-50">
@@ -23,34 +22,8 @@ const ContactsCitiesBlack = () => {
           </h2>
         </div>
 
-        {/* Общие контакты */}
-        <div className="bg-white rounded-xl p-6 md:p-8 border border-gray-100 shadow-sm mb-8 md:mb-10 max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#0047BB]/15 flex items-center justify-center flex-shrink-0">
-                <Mail className="w-5 h-5 text-[#0047BB]" />
-              </div>
-              <div>
-                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Почта</p>
-                <a href={`mailto:${email}`} className="text-[#0047BB] font-semibold hover:underline break-all">
-                  {emailDisplay}
-                </a>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-[#0047BB]/15 flex items-center justify-center flex-shrink-0">
-                <MapPin className="w-5 h-5 text-[#0047BB]" />
-              </div>
-              <div>
-                <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Главный офис</p>
-                <p className="text-gray-900 font-medium">Алматы, 6-й микрорайон, 11</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* По городам с кнопкой WhatsApp */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-10 md:mb-12">
+        {/* Города + Instagram в одной сетке */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {cities.map((item, i) => (
             <div
               key={i}
@@ -85,19 +58,34 @@ const ContactsCitiesBlack = () => {
               </a>
             </div>
           ))}
-        </div>
 
-        {/* Instagram */}
-        <div className="text-center">
-          <p className="text-gray-600 text-sm mb-2">Мы в соцсетях</p>
-          <a
-            href={instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-[#0047BB] font-bold text-lg hover:underline"
-          >
-            @artflowers.kazakhstan
-          </a>
+          {/* Instagram — такой же мини-блок как город */}
+          <div className="bg-white rounded-xl p-6 border-2 border-[#0047BB]/20 shadow-sm hover:border-[#0047BB]/40 transition-colors flex flex-col">
+            <h3 className="text-lg font-bold text-[#0047BB] mb-3">Instagram</h3>
+            <a
+              href={instagramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#0047BB] font-medium hover:underline mb-4"
+            >
+              @artflowers.kazakhstan
+            </a>
+            <a
+              href={`https://wa.me/${whatsappGeneral}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-auto"
+            >
+              <Button
+                type="button"
+                size="sm"
+                className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white gap-2"
+              >
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </section>
