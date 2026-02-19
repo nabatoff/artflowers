@@ -45,7 +45,7 @@ const HeaderBlack = () => {
               <button 
                 key={item.id} 
                 onClick={() => scrollToSection(item.id)} 
-                className="text-xs font-medium text-gray-600 hover:text-[#0047BB] transition-colors tracking-wider"
+                className="text-xs font-medium text-gray-700 hover:text-[#0047BB] transition-colors tracking-wider"
               >
                 {item.label}
               </button>

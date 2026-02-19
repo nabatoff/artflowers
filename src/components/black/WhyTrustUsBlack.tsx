@@ -9,9 +9,11 @@ const WhyTrustUsBlack = () => {
   return (
     <section id="why-us" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center uppercase tracking-wide mb-6 md:mb-8">
-          Почему нам доверяют
-        </h2>
+        <div className="text-center mb-6 md:mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+            Почему нам доверяют
+          </h2>
+        </div>
         <p className="text-gray-600 text-center text-base md:text-lg max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
           Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих регионов мира — мы контролируем каждый этап от среза до вашей двери.
         </p>

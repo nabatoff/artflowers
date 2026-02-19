@@ -2,14 +2,16 @@ const AboutBlack = () => {
   return (
     <section id="about" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 text-center uppercase tracking-wide mb-8 md:mb-12">
-          О компании
-        </h2>
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+            О компании
+          </h2>
+        </div>
 
         {/* Text Content */}
         <div className="space-y-5 text-gray-600 text-sm md:text-base lg:text-lg leading-relaxed text-center">
           <p>
-            <span className="font-semibold text-gray-900">ArtFlowers</span> — крупнейший поставщик свежесрезанных цветов
+            <span className="font-semibold text-[#0047BB]">ArtFlowers</span> — крупнейший поставщик свежесрезанных цветов
             и indoor/outdoor растений в Казахстане с собственной транспортно-логистической компанией.
           </p>
           <p>

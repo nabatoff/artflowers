@@ -15,7 +15,7 @@ const FooterBlack = () => {
             </p>
             <button
               onClick={() => setIsOfferOpen(true)}
-              className="text-gray-500 hover:text-gray-900 transition-colors text-sm"
+              className="text-[#0047BB] hover:text-[#003a99] font-medium transition-colors text-sm"
             >
               Публичная оферта
             </button>

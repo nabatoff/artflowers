@@ -27,9 +27,11 @@ const CooperationFormBlack = () => {
   return (
     <section id="cooperation" className="py-12 md:py-20 bg-white">
       <div className="container mx-auto px-4 lg:px-8 max-w-xl">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center uppercase tracking-wide mb-8 md:mb-10">
-          Предложение о сотрудничестве
-        </h2>
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+            Предложение о сотрудничестве
+          </h2>
+        </div>
         <form
           onSubmit={handleSubmit}
           className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-100 shadow-sm space-y-4"
@@ -39,7 +41,7 @@ const CooperationFormBlack = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB]"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
           />
           <Input
             placeholder="Номер телефона *"
@@ -47,13 +49,13 @@ const CooperationFormBlack = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB]"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
           />
           <Textarea
             placeholder="Комментарий (необязательно)"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] min-h-[100px] resize-none"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20 min-h-[100px] resize-none"
           />
           <Button
             type="submit"
