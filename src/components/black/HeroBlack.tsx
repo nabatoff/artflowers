@@ -29,18 +29,18 @@ const HeroBlack = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20 flex items-end md:items-center min-h-full">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20 flex items-end md:items-center min-h-full w-full">
         <div
-          className="max-w-xl w-full pb-8 md:pb-0 flex flex-wrap text-left relative md:absolute md:left-[185px] md:top-[420px] leading-[1.2] md:leading-[34px] text-3xl sm:text-4xl md:text-[70px] font-semibold"
+          className="min-w-0 w-full max-w-xl pb-8 md:pb-0 flex flex-wrap text-left relative md:absolute md:left-[185px] md:top-[420px] leading-[1.2] md:leading-[34px] text-3xl sm:text-4xl md:text-[70px] font-semibold break-words"
         >
           {/* Main Headline */}
-          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight break-words">
             <span className="block leading-tight md:leading-[60px]">Крупнейший</span>
             <span className="block mt-1 md:mt-2 shadow-none">поставщик</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white/95 text-sm sm:text-base md:text-xl mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed max-w-lg">
+          <p className="text-white/95 text-sm sm:text-base md:text-xl mt-4 md:mt-6 mb-6 md:mb-10 leading-relaxed max-w-lg break-words">
             <span className="block">свежесрезанных цветов и растений в Казахстане</span>
             <span className="block mt-1">с собственной транспортно-логистической компанией.</span>
           </p>
