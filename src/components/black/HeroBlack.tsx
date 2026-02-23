@@ -30,11 +30,13 @@ const HeroBlack = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20 flex items-end md:items-center min-h-full">
-        <div className="max-w-xl w-full pb-8 md:pb-0">
+        <div
+          className="max-w-xl w-full pb-8 md:pb-0 flex flex-wrap text-left absolute left-[185px] top-[420px] leading-[34px] text-[70px] font-semibold"
+        >
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
-            <span className="block">Крупнейший</span>
-            <span className="block mt-1 md:mt-2">поставщик</span>
+            <span className="block leading-[60px]">Крупнейший</span>
+            <span className="block mt-1 md:mt-2 shadow-none">поставщик</span>
           </h1>
 
           {/* Subtitle */}
