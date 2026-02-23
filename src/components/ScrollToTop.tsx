@@ -66,7 +66,8 @@ const ScrollToTop = () => {
                   <Button
                     onClick={scrollToTop}
                     size="icon"
-                    className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg bg-white text-[#0047BB] hover:bg-white hover:opacity-90 touch-manipulation"
+                    variant="outline"
+                    className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg !bg-white !text-[#0047BB] hover:!bg-white border-white/50 touch-manipulation"
                     aria-label="Наверх"
                   >
                     <ArrowUp className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -95,7 +96,8 @@ const ScrollToTop = () => {
               <Button
                 onClick={openWhatsApp}
                 size="icon"
-                className="relative rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg bg-white text-[#0047BB] hover:bg-white hover:opacity-90 touch-manipulation"
+                variant="outline"
+                className="relative rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg !bg-white !text-[#0047BB] hover:!bg-white border-white/50 touch-manipulation"
                 aria-label="WhatsApp"
               >
                 <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 text-[#0047BB]" />
@@ -118,7 +120,8 @@ const ScrollToTop = () => {
               <Button
                 onClick={callPhone}
                 size="icon"
-                className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg bg-white text-[#0047BB] hover:bg-white hover:opacity-90 touch-manipulation"
+                variant="outline"
+                className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg !bg-white !text-[#0047BB] hover:!bg-white border-white/50 touch-manipulation"
                 aria-label="Позвонить"
               >
                 <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
