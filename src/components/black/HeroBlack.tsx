@@ -29,24 +29,26 @@ const HeroBlack = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-12 md:py-16">
-        <div className="max-w-xl">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20 flex items-end md:items-center min-h-full">
+        <div className="max-w-xl w-full pb-8 md:pb-0">
           {/* Main Headline */}
-           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 md:mb-6 text-white">
-            Крупнейший
-            <br />
-            поставщик
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
+            <span className="block">Крупнейший</span>
+            <span className="block mt-1 md:mt-2">поставщик</span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-white text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
-            свежесрезанных цветов и растений в Казахстане
-            <br />
-            с собственной транспортно-логистической компанией.
+          <p className="text-white/95 text-base sm:text-lg md:text-xl mt-5 md:mt-6 mb-8 md:mb-10 leading-relaxed max-w-lg">
+            <span className="block">свежесрезанных цветов и растений в Казахстане</span>
+            <span className="block mt-1">с собственной транспортно-логистической компанией.</span>
           </p>
 
           {/* CTA Button */}
-          <Button onClick={() => scrollToSection("cooperation")} size="lg" className="bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base px-6 md:px-8 py-5 md:py-6 w-full sm:w-auto">
+          <Button
+            onClick={() => scrollToSection("cooperation")}
+            size="lg"
+            className="bg-[#0047BB] hover:bg-[#003a99] text-white font-semibold uppercase tracking-wider text-sm md:text-base px-8 md:px-10 py-6 md:py-7 rounded-lg"
+          >
             Оставить заявку
           </Button>
         </div>

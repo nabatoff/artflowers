@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Geologica", "sans-serif"],
-        body: ["Inter", "sans-serif"],
+        display: ["'Montserrat Alternates'", "sans-serif"],
+        body: ["'Montserrat Alternates'", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
