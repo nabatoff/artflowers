@@ -41,7 +41,7 @@ const CooperationFormBlack = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-500 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
           />
           <Input
             placeholder="Номер телефона *"
@@ -49,13 +49,13 @@ const CooperationFormBlack = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
-            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-500 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
           />
           <Textarea
             placeholder="Комментарий (необязательно)"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20 min-h-[100px] resize-none"
+            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-500 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20 min-h-[100px] resize-none"
           />
           <Button
             type="submit"
