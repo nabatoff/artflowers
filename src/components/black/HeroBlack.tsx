@@ -11,7 +11,7 @@ const HeroBlack = () => {
       });
     }
   };
-  return <section className="relative h-screen min-h-screen flex items-center overflow-hidden">
+  return <section className="relative min-h-[130vh] flex items-center overflow-hidden">
       {/* Background Video — на весь экран */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <video
