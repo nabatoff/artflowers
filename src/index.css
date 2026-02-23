@@ -69,6 +69,8 @@
     scroll-behavior: smooth;
     /* Fix for iOS Safari 100vh issue */
     height: -webkit-fill-available;
+    /* Глобальное уменьшение масштаба сайта */
+    zoom: 0.9;
   }
 
   body {
