@@ -11,8 +11,8 @@ const HeroBlack = () => {
       });
     }
   };
-  return <section className="relative h-screen md:min-h-screen flex items-center overflow-hidden pt-0 md:pt-16">
-      {/* Background Video — мобильная (уменьшено, без полос) и десктопная версия */}
+  return <section className="relative h-screen min-h-screen flex items-center overflow-hidden">
+      {/* Background Video — на весь экран */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <video
           autoPlay
@@ -20,7 +20,7 @@ const HeroBlack = () => {
           loop
           playsInline
           preload="metadata"
-          className="absolute inset-0 w-full h-full object-contain object-center md:object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
           style={{ objectPosition: '55% center' }}
         >
           <source src={HERO_VIDEO} type="video/webm" />
@@ -29,7 +29,7 @@ const HeroBlack = () => {
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20 flex items-end md:items-center min-h-full w-full">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-20 flex items-end md:items-center min-h-full w-full">
         <div
           className="min-w-0 w-full max-w-xl pb-8 md:pb-0 flex flex-wrap text-left relative md:absolute md:left-[-212px] md:top-[62px] leading-[1.2] md:leading-[34px] text-3xl sm:text-4xl md:text-[70px] font-semibold break-words"
         >
