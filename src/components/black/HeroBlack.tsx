@@ -11,28 +11,28 @@ const HeroBlack = () => {
       });
     }
   };
-  return <section className="relative h-screen md:min-h-screen overflow-hidden pt-0 md:pt-16 flex items-center justify-start">
-      {/* Background Video — мобильная (уменьшено, без полос) и десктопная версия */}
+  return <section className="relative min-h-[130vh] flex items-center overflow-hidden">
+      {/* Background Video — на весь экран */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="metadata"
-        className="absolute inset-0 w-full h-full object-contain object-center md:object-cover"
-        style={{ objectPosition: '55% center' }}>
-
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          style={{ objectPosition: '55% center' }}
+        >
           <source src={HERO_VIDEO} type="video/webm" />
         </video>
         {/* Тёмный оверлей для читаемости текста */}
       </div>
 
       {/* Content */}
-      <div className="container lg:px-8 relative z-10 py-16 md:py-20 md:items-center min-h-full w-full flex items-start justify-start px-[72px] mx-[19px]">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 py-20 flex items-end md:items-center min-h-full w-full">
         <div
-        className="min-w-0 w-full max-w-xl pb-8 md:pb-0 flex flex-wrap text-left relative md:absolute md:left-[-212px] md:top-[62px] leading-[1.2] md:leading-[34px] text-3xl sm:text-4xl md:text-[70px] font-semibold break-words">
-
+          className="min-w-0 w-full max-w-2xl pb-8 md:pb-0 flex flex-wrap text-left relative md:absolute md:left-4 lg:left-8 md:top-20 leading-[1.2] md:leading-[34px] text-3xl sm:text-4xl md:text-[70px] font-semibold break-words"
+        >
           {/* Main Headline */}
           <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight break-words">
             <span className="block leading-tight md:leading-[60px]">Крупнейший</span>
@@ -47,10 +47,10 @@ const HeroBlack = () => {
 
           {/* CTA Button */}
           <Button
-          onClick={() => scrollToSection("cooperation")}
-          size="lg"
-          className="bg-[#0047BB] hover:bg-[#003a99] text-white font-semibold uppercase tracking-wider text-sm md:text-base px-8 md:px-10 py-6 md:py-7 rounded-lg">
-
+            onClick={() => scrollToSection("cooperation")}
+            size="lg"
+            className="bg-[#0047BB] hover:bg-[#003a99] text-white font-semibold uppercase tracking-wider text-sm md:text-base px-8 md:px-10 py-6 md:py-7 rounded-lg"
+          >
             Оставить заявку
           </Button>
         </div>
