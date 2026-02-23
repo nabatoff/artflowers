@@ -60,9 +60,10 @@ const CooperationFormBlack = () => {
           <Button
             type="submit"
             size="lg"
-            className="w-full bg-white hover:bg-white/90 text-[#0047BB] font-bold uppercase tracking-wider text-sm md:text-base py-5 md:py-6"
+            variant="secondary"
+            className="w-full bg-white hover:bg-white/90 text-[#0047BB] font-bold uppercase tracking-wider text-sm md:text-base py-5 md:py-6 relative z-10"
           >
-            Отправить предложение
+            <span className="relative z-10">Отправить предложение</span>
           </Button>
         </form>
       </div>
