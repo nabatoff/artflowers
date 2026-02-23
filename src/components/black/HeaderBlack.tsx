@@ -31,12 +31,12 @@ const HeaderBlack = () => {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0047BB]/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-14 md:h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <img src={logoArtflowers} alt="Art Flowers" className="h-8 md:h-10 lg:h-11" />
+            <img src={logoArtflowers} alt="Art Flowers" className="h-8 md:h-10 lg:h-11 brightness-0 invert" />
           </div>
 
           {/* Desktop Navigation */}
@@ -45,7 +45,7 @@ const HeaderBlack = () => {
               <button 
                 key={item.id} 
                 onClick={() => scrollToSection(item.id)} 
-                className="text-xs font-medium text-gray-700 hover:text-[#0047BB] transition-colors tracking-wider"
+                className="text-xs font-medium text-white hover:text-white/70 transition-colors tracking-wider"
               >
                 {item.label}
               </button>
@@ -56,7 +56,7 @@ const HeaderBlack = () => {
           <div className="hidden md:block">
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="bg-[#0047BB] hover:bg-[#003a99] text-white text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-4 md:py-5">
+                <Button className="bg-white hover:bg-white/90 text-[#0047BB] text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-4 md:py-5">
                   Связаться
                 </Button>
               </DialogTrigger>
@@ -102,31 +102,31 @@ const HeaderBlack = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-gray-900">
+          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-white">
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+           <div className="md:hidden py-4 border-t border-white/20">
             <nav className="flex flex-col gap-2">
               {navItems.map(item => (
                 <button 
                   key={item.id} 
                   onClick={() => scrollToSection(item.id)} 
-                  className="text-left py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg text-sm"
+                  className="text-left py-3 px-4 text-white hover:bg-white/10 rounded-lg text-sm"
                 >
                   {item.label}
                 </button>
               ))}
               <div className="flex flex-col gap-2 mt-2 mx-4">
-                <a href="tel:+77077515144" className="flex items-center gap-2 py-3 px-4 bg-gray-50 rounded-lg text-gray-900">
-                  <Phone className="w-4 h-4 text-[#0047BB]" />
+                <a href="tel:+77077515144" className="flex items-center gap-2 py-3 px-4 bg-white/10 rounded-lg text-white">
+                  <Phone className="w-4 h-4 text-white" />
                   +7 (707) 751-51-44
                 </a>
-                <a href="tel:+77715257082" className="flex items-center gap-2 py-3 px-4 bg-gray-50 rounded-lg text-gray-900">
-                  <Phone className="w-4 h-4 text-[#0047BB]" />
+                <a href="tel:+77715257082" className="flex items-center gap-2 py-3 px-4 bg-white/10 rounded-lg text-white">
+                  <Phone className="w-4 h-4 text-white" />
                   +7 (771) 525-70-82
                 </a>
                 <a 
