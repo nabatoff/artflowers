@@ -14,29 +14,28 @@ const ContactsCitiesBlack = () => {
   const whatsappGeneral = "77717515141";
 
   return (
-    <section id="contacts" className="py-12 md:py-20 bg-gray-50">
+    <section id="contacts" className="py-12 md:py-20 bg-[#003399]">
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
             Контакты
           </h2>
         </div>
 
-        {/* Города + Instagram в одной сетке */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {cities.map((item, i) => (
             <div
               key={i}
-              className="bg-white rounded-xl p-6 border-2 border-[#0047BB]/20 shadow-sm hover:border-[#0047BB]/40 transition-colors flex flex-col"
+              className="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors flex flex-col"
             >
-              <h3 className="text-lg font-bold text-[#0047BB] mb-3">{item.city}</h3>
-              <div className="flex items-start gap-2 text-gray-700 mb-2">
-                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-[#0047BB]" />
+              <h3 className="text-lg font-bold text-white mb-3">{item.city}</h3>
+              <div className="flex items-start gap-2 text-white/70 mb-2">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5 text-white/60" />
                 <span>{item.address}</span>
               </div>
               <a
                 href={`tel:${item.whatsapp}`}
-                className="flex items-center gap-2 text-[#0047BB] font-medium hover:underline transition-colors mb-4"
+                className="flex items-center gap-2 text-white font-medium hover:text-white/80 transition-colors mb-4"
               >
                 <Phone className="w-4 h-4 flex-shrink-0" />
                 <span>{item.phone}</span>
@@ -59,14 +58,14 @@ const ContactsCitiesBlack = () => {
             </div>
           ))}
 
-          {/* Instagram — такой же мини-блок как город */}
-          <div className="bg-white rounded-xl p-6 border-2 border-[#0047BB]/20 shadow-sm hover:border-[#0047BB]/40 transition-colors flex flex-col">
-            <h3 className="text-lg font-bold text-[#0047BB] mb-3">Instagram</h3>
+          {/* Instagram */}
+          <div className="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors flex flex-col">
+            <h3 className="text-lg font-bold text-white mb-3">Instagram</h3>
             <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#0047BB] font-medium hover:underline mb-4"
+              className="text-white font-medium hover:text-white/80 mb-4"
             >
               @artflowers.kazakhstan
             </a>

@@ -7,23 +7,23 @@ const WhyTrustUsBlack = () => {
   ];
 
   return (
-    <section id="why-us" className="py-12 md:py-20 bg-white">
+    <section id="why-us" className="py-12 md:py-20 bg-[#0047BB]">
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
         <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
             Почему нам доверяют
           </h2>
         </div>
-        <p className="text-gray-600 text-center text-base md:text-lg max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
+        <p className="text-white/70 text-center text-base md:text-lg max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
           Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих регионов мира — мы контролируем каждый этап от среза до вашей двери.
         </p>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {stats.map((item, i) => (
             <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#0047BB] mb-1 md:mb-2">
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
                 {item.value}
               </div>
-              <div className="text-gray-600 text-sm md:text-base">{item.label}</div>
+              <div className="text-white/70 text-sm md:text-base">{item.label}</div>
             </div>
           ))}
         </div>

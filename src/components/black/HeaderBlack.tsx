@@ -56,7 +56,7 @@ const HeaderBlack = () => {
           <div className="hidden md:block">
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="bg-white hover:bg-white/90 text-[#0047BB] text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-4 md:py-5">
+                <Button className="bg-white hover:bg-white/90 text-[#0047BB] font-bold text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-4 md:py-5 border-2 border-white">
                   Связаться
                 </Button>
               </DialogTrigger>
