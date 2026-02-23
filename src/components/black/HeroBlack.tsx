@@ -26,8 +26,6 @@ const HeroBlack = () => {
           <source src={HERO_VIDEO} type="video/webm" />
         </video>
         {/* Тёмный оверлей для читаемости текста */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 md:from-black/60 via-black/40 md:via-black/30 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/70 md:to-black/80" />
       </div>
 
       {/* Content */}
