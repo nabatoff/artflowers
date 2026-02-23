@@ -7,15 +7,15 @@ const FooterBlack = () => {
 
   return (
     <>
-      <footer className="py-6 border-t border-gray-200 bg-white">
+      <footer className="py-6 border-t border-white/20 bg-[#003399]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-sm text-center sm:text-left">
+            <p className="text-white/60 text-sm text-center sm:text-left">
               Artflowers © 2024. Все права защищены.
             </p>
             <button
               onClick={() => setIsOfferOpen(true)}
-              className="text-[#0047BB] hover:text-[#003a99] font-medium transition-colors text-sm"
+              className="text-white hover:text-white/70 font-medium transition-colors text-sm"
             >
               Публичная оферта
             </button>

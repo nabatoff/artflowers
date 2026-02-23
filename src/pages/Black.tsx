@@ -18,7 +18,7 @@ const Black = () => {
         description="Your Global Shipments, Perfected. Professional logistics services including air freight, ocean cargo, and road transport."
         canonical="/"
       />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-[#0047BB]">
         <HeaderBlack />
         <main>
           <HeroBlack />

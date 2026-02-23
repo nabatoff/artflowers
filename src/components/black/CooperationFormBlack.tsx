@@ -25,23 +25,23 @@ const CooperationFormBlack = () => {
   };
 
   return (
-    <section id="cooperation" className="py-12 md:py-20 bg-white">
+    <section id="cooperation" className="py-12 md:py-20 bg-[#0047BB]">
       <div className="container mx-auto px-4 lg:px-8 max-w-xl">
         <div className="text-center mb-8 md:mb-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-[#0047BB] uppercase tracking-wide pb-2 border-b-2 border-[#0047BB]/40 inline-block">
+          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
             Предложение о сотрудничестве
           </h2>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="bg-gray-50 rounded-xl p-6 md:p-8 border border-gray-100 shadow-sm space-y-4"
+          className="bg-white/10 rounded-xl p-6 md:p-8 border border-white/20 space-y-4"
         >
           <Input
             placeholder="Имя *"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
+            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20"
           />
           <Input
             placeholder="Номер телефона *"
@@ -49,18 +49,18 @@ const CooperationFormBlack = () => {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             required
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20"
+            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20"
           />
           <Textarea
             placeholder="Комментарий (необязательно)"
             value={comment}
             onChange={(e) => setComment(e.target.value)}
-            className="bg-white border-gray-200 text-gray-900 placeholder:text-gray-400 focus:border-[#0047BB] focus:ring-2 focus:ring-[#0047BB]/20 min-h-[100px] resize-none"
+            className="bg-white/10 border-white/30 text-white placeholder:text-white/50 focus:border-white focus:ring-2 focus:ring-white/20 min-h-[100px] resize-none"
           />
           <Button
             type="submit"
             size="lg"
-            className="w-full bg-[#0047BB] hover:bg-[#003a99] text-white uppercase tracking-wider text-sm md:text-base py-5 md:py-6"
+            className="w-full bg-white hover:bg-white/90 text-[#0047BB] font-bold uppercase tracking-wider text-sm md:text-base py-5 md:py-6"
           >
             Отправить предложение
           </Button>
