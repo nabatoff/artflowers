@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const HERO_IMAGE = "/hero.png";
+const HERO_IMAGE = "/hero-desktop.png";
 const HERO_IMAGE_MOBILE = "/hero-mobile.png";
 
 const HeroBlack = () => {
@@ -12,7 +12,7 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <img
