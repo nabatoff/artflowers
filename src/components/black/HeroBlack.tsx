@@ -12,21 +12,20 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-[100svh] md:h-[calc(100vh+4rem)] -mt-14 md:-mt-16 flex items-center overflow-hidden">
-      {/* Background */}
+    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+4px)] -mt-14 md:-mt-16 flex items-center overflow-hidden">
+      {/* Background — адаптивное фото по брейкпоинтам */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
-        <img
-          src={HERO_IMAGE_MOBILE}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover md:hidden"
-          style={{ objectPosition: "50% 30%" }}
-        />
-        <img
-          src={HERO_IMAGE}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover hidden md:block"
-          style={{ objectPosition: "center center" }}
-        />
+        <picture className="absolute inset-0 block h-full w-full">
+          <source
+            media="(min-width: 768px)"
+            srcSet={HERO_IMAGE}
+          />
+          <img
+            src={HERO_IMAGE_MOBILE}
+            alt=""
+            className="h-full w-full object-cover object-[50%_30%] md:object-center"
+          />
+        </picture>
       </div>
 
       {/* Content */}
