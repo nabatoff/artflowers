@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
-const HERO_VIDEO = "/hero-video.webm";
+const HERO_IMAGE = "/hero.png";
+const HERO_IMAGE_MOBILE = "/hero-mobile.png";
 
 const HeroBlack = () => {
   const scrollToSection = (id: string) => {
@@ -12,20 +13,20 @@ const HeroBlack = () => {
     }
   };
   return <section className="relative min-h-[130vh] flex items-center overflow-hidden">
-      {/* Background Video — на весь экран */}
+      {/* Background — мобильное фото до md, десктопное с md */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          style={{ objectPosition: '55% center' }}
-        >
-          <source src={HERO_VIDEO} type="video/webm" />
-        </video>
-        {/* Тёмный оверлей для читаемости текста */}
+        <img
+          src={HERO_IMAGE_MOBILE}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center md:hidden"
+          style={{ objectPosition: "55% center" }}
+        />
+        <img
+          src={HERO_IMAGE}
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover object-center hidden md:block"
+          style={{ objectPosition: "55% center" }}
+        />
       </div>
 
       {/* Content — блок в левом верхнем углу, привязан к секции */}
