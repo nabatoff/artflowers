@@ -20,7 +20,7 @@ const Black = () => {
       />
       <div className="min-h-screen bg-[#0047BB]">
         <HeaderBlack />
-        <main>
+        <main className="pt-14 md:pt-16">
           <HeroBlack />
           <AboutBlack />
           <WhatWeOfferBlack />
