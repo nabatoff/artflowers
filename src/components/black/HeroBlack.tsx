@@ -12,7 +12,7 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-[100svh] -mt-14 md:-mt-16 flex items-center overflow-hidden">
+    <section className="relative h-[100svh] md:h-[calc(100vh+4rem)] -mt-14 md:-mt-16 flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <img
