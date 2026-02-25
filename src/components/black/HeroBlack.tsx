@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const HERO_IMAGE = "/hero-desktop.png";
-const HERO_IMAGE_MOBILE = "/hero-mobile.png";
+const HERO_IMAGE = "/hero.png";
 
 const HeroBlack = () => {
   const scrollToSection = (id: string) => {
