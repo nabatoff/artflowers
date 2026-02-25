@@ -29,7 +29,7 @@ const HeroBlack = () => {
 
       {/* Content — bottom-left like reference */}
       <div className="absolute z-10 bottom-10 md:bottom-16 left-6 md:left-16 lg:left-24 max-w-3xl">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight whitespace-nowrap">
           Крупнейший поставщик
         </h1>
 
