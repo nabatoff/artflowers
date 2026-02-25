@@ -19,7 +19,7 @@ const HeroBlack = () => {
           <img
             src={HERO_IMAGE_MOBILE}
             alt=""
-            className="h-full w-full object-contain object-center md:object-cover md:object-center"
+            className="h-full w-full object-contain object-[50%_65%] md:object-cover md:object-center"
           />
         </picture>
         {/* Затемнение слева для читаемости текста */}
