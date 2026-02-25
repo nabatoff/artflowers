@@ -12,7 +12,7 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+2rem)] md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden">
+    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+3rem)] md:-mb-12 -mt-14 md:-mt-16 flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <picture className="absolute inset-0 block h-full w-full">
           <source
@@ -25,6 +25,13 @@ const HeroBlack = () => {
             className="h-full w-full object-cover object-[50%_30%] md:object-center"
           />
         </picture>
+        {/* Затемнение снизу для читаемости текста */}
+        <div
+          className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none"
+          style={{
+            background: "linear-gradient(to top, rgba(10,15,26,0.95) 0%, rgba(10,15,26,0.4) 40%, transparent 100%)"
+          }}
+        />
       </div>
 
       {/* Content — bottom-left like reference */}
