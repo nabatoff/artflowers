@@ -14,12 +14,12 @@ const HeroBlack = () => {
   return (
     <section className="relative h-[calc(100dvh+3.5rem+3rem)] md:h-[calc(100vh+4rem+2rem)] -mb-8 md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden border-0">
       <div className="absolute inset-0 bg-[#0a0f1a] top-0 bottom-0 left-[-2px] right-[-2px] w-[calc(100%+4px)] max-w-none">
-        <picture className="absolute inset-0 block h-full w-full">
+        <picture className="absolute inset-0 block h-full w-full overflow-hidden">
           <source media="(min-width: 768px)" srcSet={HERO_IMAGE} />
           <img
             src={HERO_IMAGE_MOBILE}
             alt=""
-            className="h-full w-full object-cover object-bottom md:object-center"
+            className="h-full w-full object-cover object-bottom md:object-center scale-95 md:scale-100 origin-center"
           />
         </picture>
         {/* Затемнение слева для читаемости текста */}
