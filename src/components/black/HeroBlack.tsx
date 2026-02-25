@@ -12,8 +12,7 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+12px)] -mt-14 md:-mt-16 flex items-center overflow-hidden">
-      {/* Background — адаптивное фото по брейкпоинтам */}
+    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+2rem)] md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <picture className="absolute inset-0 block h-full w-full">
           <source
