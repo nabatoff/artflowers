@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 
 const HERO_IMAGE = "/hero.png";
+const HERO_IMAGE_MOBILE = "/hero-mobile.png";
 
 const HeroBlack = () => {
   const scrollToSection = (id: string) => {
@@ -13,11 +14,14 @@ const HeroBlack = () => {
   return (
     <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+2rem)] md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0a0f1a]">
-        <img
-          src={HERO_IMAGE}
-          alt=""
-          className="h-full w-full object-cover object-[50%_30%] md:object-center"
-        />
+        <picture className="absolute inset-0 block h-full w-full">
+          <source media="(min-width: 768px)" srcSet={HERO_IMAGE} />
+          <img
+            src={HERO_IMAGE_MOBILE}
+            alt=""
+            className="h-full w-full object-cover object-[50%_30%] md:object-center"
+          />
+        </picture>
         {/* Затемнение слева для читаемости текста */}
         <div
           className="absolute inset-y-0 left-0 w-1/2 md:w-2/5 pointer-events-none"
