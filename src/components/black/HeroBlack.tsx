@@ -18,11 +18,11 @@ const HeroBlack = () => {
           alt=""
           className="h-full w-full object-cover object-[50%_30%] md:object-center"
         />
-        {/* Затемнение снизу для читаемости текста */}
+        {/* Затемнение слева для читаемости текста */}
         <div
-          className="absolute inset-x-0 bottom-0 h-1/2 pointer-events-none"
+          className="absolute inset-y-0 left-0 w-1/2 md:w-2/5 pointer-events-none"
           style={{
-            background: "linear-gradient(to top, rgba(10,15,26,0.95) 0%, rgba(10,15,26,0.4) 40%, transparent 100%)"
+            background: "linear-gradient(to right, rgba(10,15,26,0.9) 0%, rgba(10,15,26,0.3) 60%, transparent 100%)"
           }}
         />
       </div>
