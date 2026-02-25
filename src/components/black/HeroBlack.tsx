@@ -12,7 +12,7 @@ const HeroBlack = () => {
   };
 
   return (
-    <section className="relative h-[100dvh] md:h-[calc(100vh+4rem+2rem)] md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden">
+    <section className="relative h-[calc(100dvh+3.5rem)] md:h-[calc(100vh+4rem+2rem)] md:-mb-8 -mt-14 md:-mt-16 flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[#0a0f1a]">
         <picture className="absolute inset-0 block h-full w-full">
           <source media="(min-width: 768px)" srcSet={HERO_IMAGE} />
