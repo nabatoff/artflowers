@@ -37,6 +37,14 @@ const HeroBlack = () => {
           <span className="block">свежесрезанных цветов и растений в Казахстане</span>
           <span className="block">с собственной транспортно-логистической компанией</span>
         </p>
+
+        <Button
+          onClick={() => scrollToSection("cooperation")}
+          size="lg"
+          className="bg-[#0047BB] hover:bg-[#003a99] text-white font-semibold uppercase tracking-wider text-sm md:text-base px-8 md:px-10 py-6 md:py-7 rounded-lg w-fit mt-5 md:mt-8"
+        >
+          Оставить заявку
+        </Button>
       </div>
     </section>
   );
