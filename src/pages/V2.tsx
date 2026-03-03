@@ -172,23 +172,6 @@ const HeroV2 = () => {
               ))}
             </div>
           </motion.div>
-
-          {/* Right: hero image overlay (градиент поверх фонового фото) */}
-          <motion.div
-            className="hidden lg:block relative h-full min-h-[420px] rounded-2xl overflow-hidden"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <div
-              className="absolute inset-0 rounded-2xl"
-              style={{
-                background:
-                  'radial-gradient(circle at top right, rgba(15,23,42,0.0) 0%, rgba(15,23,42,0.65) 55%, rgba(15,23,42,0.9) 100%)',
-                border: '1px solid rgba(148,163,184,0.25)',
-              }}
-            />
-          </motion.div>
         </div>
       </div>
 
