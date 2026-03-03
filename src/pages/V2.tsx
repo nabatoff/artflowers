@@ -156,11 +156,15 @@ const HeroV2 = () => {
         </div>
       </div>
 
-      {/* Bottom wave */}
-      <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 60" fill="none" className="w-full">
-          <path d="M0 60L60 50C120 40 240 20 360 15C480 10 600 20 720 25C840 30 960 30 1080 25C1200 20 1320 10 1380 5L1440 0V60H1380C1320 60 1200 60 1080 60C960 60 840 60 720 60C600 60 480 60 360 60C240 60 120 60 60 60H0Z" fill="#001166"/>
-        </svg>
+      {/* Полупрозрачный переход в следующую секцию */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32">
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(to bottom, rgba(0,16,77,0) 0%, rgba(0,17,102,0.75) 55%, rgba(0,17,102,1) 100%)',
+          }}
+        />
       </div>
     </section>
   );
