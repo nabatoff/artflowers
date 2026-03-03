@@ -108,17 +108,14 @@ const HeroV2 = () => {
     <section
       id="hero"
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
-      style={{ backgroundColor: '#00104d' }}
+      style={{
+        backgroundImage: "url('/hero.png')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundColor: '#00104d',
+      }}
     >
-      {/* Full-section hero background image */}
-      <div className="absolute inset-0 -z-10">
-        <img
-          src="/hero.png"
-          alt="Цветы ArtFlowers"
-          className="w-full h-full object-cover object-center"
-        />
-      </div>
-
       {/* Background decorative elements поверх фото */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(59,91,219,0.25) 0%, transparent 70%)' }} />
