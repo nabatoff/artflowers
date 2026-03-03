@@ -161,25 +161,12 @@ const HeroV2 = () => {
             </div>
           </motion.div>
 
-          {/* Right: decorative floating elements */}
-          <div className="hidden lg:block relative h-[500px]">
-            {/* City pins */}
-            {[
-              { name: 'Уральск', top: '18%', left: '20%' },
-              { name: 'Астана', top: '22%', right: '22%' },
-              { name: 'Усть-Камен.', top: '28%', right: '5%' },
-              { name: 'Актау', bottom: '30%', left: '5%' },
-              { name: 'Алматы', bottom: '18%', right: '18%' },
-            ].map((city, i) => (
-              <div key={i} className="absolute flex flex-col items-center gap-1" style={{ top: city.top, left: city.left, right: city.right, bottom: city.bottom }}>
-                <span className="text-white/80 text-xs font-bold tracking-widest uppercase">{city.name}</span>
-                <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ background: '#60a5fa', boxShadow: '0 0 8px #60a5fa, 0 0 16px rgba(96,165,250,0.5)' }} />
-              </div>
-            ))}
-            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="w-64 h-64 rounded-full blur-3xl" style={{ background: 'rgba(0,51,204,0.2)' }} />
-            </div>
-          </div>
+          {/* Right: hero image */}
+          <motion.div className="hidden lg:block relative h-[500px] rounded-2xl overflow-hidden"
+            initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
+            <img src="/hero.png" alt="Цветы ArtFlowers" className="w-full h-full object-cover rounded-2xl" />
+            <div className="absolute inset-0 rounded-2xl" style={{ background: 'linear-gradient(135deg, rgba(0,16,77,0.3) 0%, transparent 60%)' }} />
+          </motion.div>
         </div>
       </div>
 
