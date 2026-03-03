@@ -110,9 +110,9 @@ const HeroV2 = () => {
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
       style={{
         backgroundImage: "url('/hero.png')",
-        // чуть «отдаляем» изображение на больших экранах
-        backgroundSize: '90% auto',
-        backgroundPosition: 'center top',
+        // показываем кадр 21:9 целиком без обрезки
+        backgroundSize: 'contain',
+        backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#00104d',
       }}
