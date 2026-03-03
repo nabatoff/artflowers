@@ -105,9 +105,21 @@ const HeroV2 = () => {
   ];
 
   return (
-    <section id="hero" className="min-h-screen flex items-center relative overflow-hidden pt-20"
-      style={{ background: 'linear-gradient(135deg, #00104d 0%, #001a80 40%, #0033cc 100%)' }}>
-      {/* Background decorative elements */}
+    <section
+      id="hero"
+      className="min-h-screen flex items-center relative overflow-hidden pt-20"
+      style={{ backgroundColor: '#00104d' }}
+    >
+      {/* Full-section hero background image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/hero.png"
+          alt="Цветы ArtFlowers"
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
+
+      {/* Background decorative elements поверх фото */}
       <div className="absolute inset-0 opacity-30 pointer-events-none">
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 70% 50%, rgba(59,91,219,0.25) 0%, transparent 70%)' }} />
       </div>
@@ -161,11 +173,21 @@ const HeroV2 = () => {
             </div>
           </motion.div>
 
-          {/* Right: hero image */}
-          <motion.div className="hidden lg:block relative h-[500px] rounded-2xl overflow-hidden"
-            initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.2 }}>
-            <img src="/hero.png" alt="Цветы ArtFlowers" className="w-full h-full object-cover rounded-2xl" />
-            <div className="absolute inset-0 rounded-2xl" style={{ background: 'linear-gradient(135deg, rgba(0,16,77,0.3) 0%, transparent 60%)' }} />
+          {/* Right: hero image overlay (градиент поверх фонового фото) */}
+          <motion.div
+            className="hidden lg:block relative h-full min-h-[420px] rounded-2xl overflow-hidden"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            <div
+              className="absolute inset-0 rounded-2xl"
+              style={{
+                background:
+                  'radial-gradient(circle at top right, rgba(15,23,42,0.0) 0%, rgba(15,23,42,0.65) 55%, rgba(15,23,42,0.9) 100%)',
+                border: '1px solid rgba(148,163,184,0.25)',
+              }}
+            />
           </motion.div>
         </div>
       </div>
