@@ -110,8 +110,9 @@ const HeroV2 = () => {
       className="min-h-screen flex items-center relative overflow-hidden pt-20"
       style={{
         backgroundImage: "url('/hero.png')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center center',
+        // чуть «отдаляем» изображение на больших экранах
+        backgroundSize: '90% auto',
+        backgroundPosition: 'center top',
         backgroundRepeat: 'no-repeat',
         backgroundColor: '#00104d',
       }}
@@ -126,11 +127,6 @@ const HeroV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-80px)] py-16">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <div className="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-2 mb-8">
-              <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-white/80 text-sm font-medium">17 лет на рынке Казахстана</span>
-            </div>
-
             <h1 className="font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>
               Крупнейший<br/>
               <span style={{ background: 'linear-gradient(135deg, #93c5fd, #c4b5fd)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
@@ -155,19 +151,7 @@ const HeroV2 = () => {
               </a>
             </div>
 
-            <div className="mt-14 flex flex-wrap gap-8">
-              {stats.map((s, i) => (
-                <div key={i} className="flex items-center gap-8">
-                  <div>
-                    <p className="text-3xl font-black" style={{ fontFamily: 'Montserrat, sans-serif', background: 'linear-gradient(135deg, #fff 0%, #a5b4fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                      {s.value}
-                    </p>
-                    <p className="text-white/50 text-sm">{s.label}</p>
-                  </div>
-                  {i < stats.length - 1 && <div className="w-px h-10 bg-white/10" />}
-                </div>
-              ))}
-            </div>
+            {/* статистику убрали по запросу */}
           </motion.div>
         </div>
       </div>
