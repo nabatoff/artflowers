@@ -5,6 +5,7 @@ import { Flower2, Palette, Warehouse, Users } from 'lucide-react';
 import logoArtflowers from '@/assets/logo-artflowers-blue.png';
 import ScrollToTop from '@/components/ScrollToTop';
 import SEO from '@/components/SEO';
+import { LanguageProvider } from '@/contexts/LanguageContext';
 
 const WhatsAppIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -536,7 +537,7 @@ const FooterV2 = () => (
 
 /* ─── Page ─── */
 const V2 = () => (
-  <>
+  <LanguageProvider>
     <SEO title="ArtFlowers — Крупнейший поставщик цветов в Казахстане" description="Свежесрезанные цветы и растения с собственной транспортно-логистической компанией" canonical="/v2" />
     <div className="min-h-screen" style={{ background: '#00104d', color: '#fff', fontFamily: 'Inter, sans-serif' }}>
       <NavV2 />
@@ -549,7 +550,7 @@ const V2 = () => (
       <FooterV2 />
       <ScrollToTop />
     </div>
-  </>
+  </LanguageProvider>
 );
 
 export default V2;
