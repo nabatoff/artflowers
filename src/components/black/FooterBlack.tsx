@@ -32,8 +32,8 @@ const FooterBlack = () => {
             <div className="space-y-4 text-gray-600 text-sm leading-relaxed">
               <p>
                 Настоящий Договор публичной оферты (далее – Оферта) адресован физическим и юридическим лицам (далее –
-                Покупатель) и определяет условия оказания услуг, представленных на сайтах https://art-time.kz и
-                https://arttimekz.com (далее – Сайт).
+                Покупатель) и определяет условия оказания услуг, представленных на сайте https://art-flowers.kz (далее
+                – Сайт).
               </p>
 
               <h3 className="text-gray-900 font-semibold pt-2">1. Общие положения</h3>

@@ -14,8 +14,8 @@ const Black = () => {
   return (
     <LanguageProvider>
       <SEO 
-        title="Art Time Logistics - Mastering the Art of Logistics"
-        description="Your Global Shipments, Perfected. Professional logistics services including air freight, ocean cargo, and road transport."
+        title="ArtFlowers — Крупнейший поставщик цветов в Казахстане"
+        description="ArtFlowers — крупнейший поставщик свежесрезанных цветов и растений в Казахстане. 17 лет на рынке, прямые поставки из Эквадора, Кении, Нидерландов и других стран."
         canonical="/"
       />
       <div className="min-h-screen bg-[#0047BB]">

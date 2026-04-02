@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import { useLanguage } from '@/contexts/LanguageContext';
 
 interface SEOProps {
   title?: string;
@@ -11,7 +10,7 @@ interface SEOProps {
   noIndex?: boolean;
 }
 
-const SITE_URL = 'https://artflowers.lovable.app';
+const SITE_URL = 'https://art-flowers.kz';
 
 const SEO = ({
   title = 'ArtFlowers — Крупнейший поставщик цветов в Казахстане',
@@ -22,8 +21,6 @@ const SEO = ({
   canonical,
   noIndex = false,
 }: SEOProps) => {
-  const { language } = useLanguage();
-
   useEffect(() => {
     const fullOgImage = ogImage.startsWith('http') ? ogImage : `${SITE_URL}${ogImage}`;
     const currentPath = window.location.pathname;
@@ -85,7 +82,7 @@ const SEO = ({
     updateMetaTag('og:type', ogType, true);
     updateMetaTag('og:url', canonicalUrl, true);
     updateMetaTag('og:site_name', 'ArtFlowers', true);
-    updateMetaTag('og:locale', language === 'en' ? 'en_US' : language === 'kz' ? 'kk_KZ' : 'ru_RU', true);
+    updateMetaTag('og:locale', 'ru_RU', true);
 
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
@@ -96,14 +93,7 @@ const SEO = ({
     // Canonical link
     updateLinkTag('canonical', canonicalUrl);
 
-    // Hreflang links for multilingual SEO
-    const basePath = currentPath.replace(/\?.*$/, '');
-    updateLinkTag('alternate', `${SITE_URL}${basePath}`, 'ru');
-    updateLinkTag('alternate', `${SITE_URL}${basePath}?lang=en`, 'en');
-    updateLinkTag('alternate', `${SITE_URL}${basePath}?lang=kz`, 'kk');
-    updateLinkTag('alternate', `${SITE_URL}${basePath}`, 'x-default');
-
-  }, [title, description, keywords, ogImage, ogType, canonical, noIndex, language]);
+  }, [title, description, keywords, ogImage, ogType, canonical, noIndex]);
 
   return null;
 };
