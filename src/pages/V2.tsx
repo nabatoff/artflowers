@@ -98,6 +98,22 @@ const NavV2 = () => {
 
 /* ─── Hero ─── */
 const HeroV2 = () => {
+  const [heroBg, setHeroBg] = useState<string>('/hero.png');
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 640px)');
+    const update = () => setHeroBg(mq.matches ? '/hero-mobile.png' : '/hero.png');
+    update();
+
+    // Safari fallback
+    if (typeof mq.addEventListener === 'function') {
+      mq.addEventListener('change', update);
+      return () => mq.removeEventListener('change', update);
+    }
+    mq.addListener(update);
+    return () => mq.removeListener(update);
+  }, []);
+
   const stats = [
     { value: '15+', label: 'собственных машин' },
     { value: '12+', label: 'представительств' },
@@ -107,13 +123,9 @@ const HeroV2 = () => {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center relative overflow-hidden pt-20"
+      className="min-h-screen flex items-center relative overflow-hidden pt-20 bg-no-repeat bg-cover bg-top lg:bg-contain lg:bg-center"
       style={{
-        backgroundImage: "url('/hero.png')",
-        // показываем кадр 21:9 целиком без обрезки
-        backgroundSize: 'contain',
-        backgroundPosition: 'center center',
-        backgroundRepeat: 'no-repeat',
+        backgroundImage: `url('${heroBg}')`,
         backgroundColor: '#00104d',
       }}
     >
@@ -188,8 +200,12 @@ const AboutV2 = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative">
             <div className="relative rounded-3xl overflow-hidden" style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-              <img src="https://images.unsplash.com/photo-1487530811015-780f93b39ca8?w=700&h=500&fit=crop&auto=format"
-                   alt="Цветочный склад" className="w-full h-80 lg:h-[420px] object-cover" />
+              <img
+                src="/Whisk_7dbf5cd6e86729088ba4e5b83f845e9cdr.png"
+                alt="ArtFlowers"
+                className="w-full h-80 lg:h-[420px] object-cover"
+                loading="lazy"
+              />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(0,16,77,0.6), transparent)' }} />
             </div>
             <div className="absolute -bottom-8 -right-4 rounded-2xl p-5 w-48 hidden lg:block"
@@ -228,10 +244,30 @@ const AboutV2 = () => {
 /* ─── Services ─── */
 const ServicesV2 = () => {
   const offers = [
-    { icon: Flower2, title: 'Цветочникам', description: 'Свежесрезанные цветы и растения под заказ, стабильные поставки и гибкие условия сотрудничества.', img: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop&auto=format' },
-    { icon: Palette, title: 'Оформителям', description: 'Широкий ассортимент для букетов, композиций и мероприятий любой сложности.', img: 'https://images.unsplash.com/photo-1551893665-f843f600794e?w=400&h=200&fit=crop&auto=format' },
-    { icon: Warehouse, title: 'Мелкооптовым складам', description: 'Регулярные поставки партиями, работа с документами и логистика под ключ.', img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=400&h=200&fit=crop&auto=format' },
-    { icon: Users, title: 'Другим партнёрам', description: 'Индивидуальные условия для ритейла, студий и компаний по всей стране.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=200&fit=crop&auto=format' },
+    {
+      icon: Flower2,
+      title: 'Цветочникам',
+      description: 'Свежесрезанные цветы и растения под заказ, стабильные поставки и гибкие условия сотрудничества.',
+      img: '/v2-solution-florists.png',
+    },
+    {
+      icon: Palette,
+      title: 'Оформителям',
+      description: 'Широкий ассортимент для букетов, композиций и мероприятий любой сложности.',
+      img: '/v2-solution-designers.png',
+    },
+    {
+      icon: Warehouse,
+      title: 'Мелкооптовым складам',
+      description: 'Регулярные поставки партиями, работа с документами и логистика под ключ.',
+      img: '/v2-solution-wholesalers.png',
+    },
+    {
+      icon: Users,
+      title: 'Другим партнёрам',
+      description: 'Индивидуальные условия для ритейла, студий и компаний по всей стране.',
+      img: '/v2-solution-partners.png',
+    },
   ];
 
   return (
@@ -249,10 +285,10 @@ const ServicesV2 = () => {
           <div className="w-16 h-1 bg-blue-400 mx-auto mt-6 rounded-full" />
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-7xl mx-auto">
           {offers.map((item, i) => (
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
-              className="rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 group"
+              className="rounded-3xl p-10 transition-all duration-300 hover:-translate-y-1 group flex flex-col h-full"
               style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)' }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.1)'; e.currentTarget.style.borderColor = 'rgba(59,91,219,0.5)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(0,0,0,0.3), 0 0 30px rgba(59,91,219,0.2)'; }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.12)'; e.currentTarget.style.boxShadow = 'none'; }}>
@@ -262,8 +298,16 @@ const ServicesV2 = () => {
               </div>
               <h3 className="font-bold text-xl text-white mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>{item.title}</h3>
               <p className="text-white/60 leading-relaxed">{item.description}</p>
-              <div className="mt-6">
-                <img src={item.img} alt={item.title} className="w-full h-36 object-cover rounded-xl opacity-70" />
+              <div className="mt-auto pt-6">
+                {/* Убираем фиксированную высоту: иначе на мобилках картинка кропается/выглядит "ломаной" при ресайзе */}
+                <div className="relative w-full overflow-hidden rounded-xl opacity-70 aspect-[4/3]">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </motion.div>
           ))}
@@ -340,8 +384,12 @@ const WhyUsV2 = () => {
         {/* Big image banner */}
         <motion.div className="mt-16 rounded-3xl overflow-hidden relative" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
           style={{ boxShadow: '0 8px 32px rgba(0,0,0,0.3)' }}>
-          <img src="https://images.unsplash.com/photo-1416339306562-f3d12fefd36f?w=1200&h=400&fit=crop&auto=format"
-               alt="Цветочная плантация" className="w-full h-64 lg:h-80 object-cover" />
+          <img
+            src="/v2-from-cut-to-door.png"
+            alt="От среза до вашей двери"
+            className="w-full h-64 lg:h-80 object-cover"
+            loading="lazy"
+          />
           <div className="absolute inset-0 flex items-center" style={{ background: 'linear-gradient(to right, rgba(0,16,77,0.9), rgba(0,16,77,0.4), transparent)' }}>
             <div className="p-8 lg:p-12 max-w-lg">
               <h3 className="font-black text-2xl lg:text-3xl text-white mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>От среза до вашей двери</h3>
@@ -405,7 +453,7 @@ const ContactsV2 = () => {
 
           {/* Instagram */}
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.25 }}
-            className="rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1"
+            className="rounded-3xl p-7 transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
             style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)' }}>
             <div className="flex items-center gap-3 mb-5">
               <div className="w-2.5 h-2.5 rounded-full" style={{ background: 'linear-gradient(135deg, #f97316, #ec4899)', boxShadow: '0 0 8px rgba(236,72,153,0.5)' }} />
@@ -415,12 +463,9 @@ const ContactsV2 = () => {
               <InstagramIcon />
               <span>@artflowers.kazakhstan</span>
             </div>
-            <div className="mb-4 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc2e?w=400&h=150&fit=crop&auto=format"
-                   alt="Instagram" className="w-full h-24 object-cover opacity-70" />
-            </div>
+            {/* Без фото над кнопкой — чтобы кнопка ровно стояла по высоте/позиции как у WhatsApp */}
             <a href="https://www.instagram.com/artflowers.kazakhstan" target="_blank" rel="noopener noreferrer"
-              className="w-full flex items-center justify-center gap-2 text-white font-semibold text-sm py-3 rounded-xl transition-all hover:-translate-y-0.5"
+              className="mt-auto w-full flex items-center justify-center gap-2 text-white font-semibold text-sm py-3 rounded-xl transition-all hover:-translate-y-0.5"
               style={{ background: 'linear-gradient(135deg, #f97316, #ec4899, #8b5cf6)' }}>
               <InstagramIcon />
               Instagram
