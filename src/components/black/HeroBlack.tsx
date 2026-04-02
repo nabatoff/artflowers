@@ -19,7 +19,8 @@ const HeroBlack = () => {
           <img
             src={HERO_IMAGE_MOBILE}
             alt=""
-            className="h-full w-full object-cover object-bottom md:object-center"
+            // Чуть поднимаем "окно" кадра на мобилке (меньше снизу, больше сверху)
+            className="h-full w-full object-cover object-[50%_70%] md:object-center"
           />
         </picture>
         {/* Затемнение слева для читаемости текста */}
@@ -32,7 +33,7 @@ const HeroBlack = () => {
       </div>
 
       {/* Content — bottom-left like reference */}
-      <div className="absolute z-10 top-1/2 -translate-y-1/2 left-6 md:left-16 lg:left-24 max-w-3xl">
+      <div className="absolute z-10 top-[58%] md:top-1/2 -translate-y-1/2 left-6 md:left-16 lg:left-24 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
           Крупнейший
           <br />поставщик
