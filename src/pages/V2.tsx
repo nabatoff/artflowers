@@ -139,7 +139,7 @@ const HeroV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-80px)] py-16">
           <motion.div initial={{ opacity: 0, x: -40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
-            <h1 className="font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] mb-6" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+            <h1 className="font-bold text-5xl sm:text-6xl lg:text-7xl text-white leading-[1.05] mb-6" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
               Крупнейший<br/>
               <span style={{ background: 'linear-gradient(135deg, #93c5fd, #c4b5fd)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 поставщик
@@ -191,7 +191,7 @@ const AboutV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="inline-block text-blue-300 text-xs font-bold tracking-[0.3em] uppercase mb-4">О компании</span>
-          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             ArtFlowers — ваш<br/>надёжный партнёр
           </h2>
           <div className="w-16 h-1 bg-blue-400 mx-auto mt-6 rounded-full" />
@@ -210,7 +210,7 @@ const AboutV2 = () => {
             </div>
             <div className="absolute -bottom-8 -right-4 rounded-2xl p-5 w-48 hidden lg:block"
                  style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)', boxShadow: '0 0 20px rgba(59,91,219,0.25)' }}>
-              <p className="text-3xl font-black" style={{ fontFamily: 'Montserrat, sans-serif', background: 'linear-gradient(135deg, #fff 0%, #a5b4fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>17</p>
+              <p className="text-3xl font-black" style={{ fontFamily: '"Times New Roman", Times, serif', background: 'linear-gradient(135deg, #fff 0%, #a5b4fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>17</p>
               <p className="text-white/60 text-sm mt-1">лет на рынке</p>
             </div>
           </motion.div>
@@ -279,7 +279,7 @@ const ServicesV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="inline-block text-blue-300 text-xs font-bold tracking-[0.3em] uppercase mb-4">Что предлагаем</span>
-          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             Решения для каждого
           </h2>
           <div className="w-16 h-1 bg-blue-400 mx-auto mt-6 rounded-full" />
@@ -296,7 +296,7 @@ const ServicesV2 = () => {
                    style={{ background: 'rgba(59,91,219,0.3)', border: '1px solid rgba(59,91,219,0.5)' }}>
                 <item.icon className="w-6 h-6 text-blue-300" strokeWidth={1.5} />
               </div>
-              <h3 className="font-bold text-xl text-white mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>{item.title}</h3>
+              <h3 className="font-bold text-xl text-white mb-3" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{item.title}</h3>
               <p className="text-white/60 leading-relaxed">{item.description}</p>
               <div className="mt-auto pt-6">
                 {/* Убираем фиксированную высоту: иначе на мобилках картинка кропается/выглядит "ломаной" при ресайзе */}
@@ -340,7 +340,7 @@ const WhyUsV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="inline-block text-blue-300 text-xs font-bold tracking-[0.3em] uppercase mb-4">Почему нам доверяют</span>
-          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             Контролируем каждый этап
           </h2>
           <p className="text-white/60 text-lg mt-4 max-w-2xl mx-auto leading-relaxed">
@@ -355,7 +355,7 @@ const WhyUsV2 = () => {
             <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
               className="rounded-3xl p-8 text-center transition-all duration-300 hover:-translate-y-1"
               style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)' }}>
-              <p className="text-5xl lg:text-6xl font-black mb-2" style={{ fontFamily: 'Montserrat, sans-serif', background: 'linear-gradient(135deg, #fff 0%, #a5b4fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <p className="text-5xl lg:text-6xl font-black mb-2" style={{ fontFamily: '"Times New Roman", Times, serif', background: 'linear-gradient(135deg, #fff 0%, #a5b4fc 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 {s.value}
               </p>
               <p className="text-white/60 text-sm">{s.label}</p>
@@ -374,7 +374,7 @@ const WhyUsV2 = () => {
                 <f.icon className="w-6 h-6 text-blue-300" />
               </div>
               <div>
-                <h4 className="font-bold text-white mb-1" style={{ fontFamily: 'Montserrat, sans-serif' }}>{f.title}</h4>
+                <h4 className="font-bold text-white mb-1" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{f.title}</h4>
                 <p className="text-white/55 text-sm leading-relaxed">{f.desc}</p>
               </div>
             </motion.div>
@@ -392,7 +392,7 @@ const WhyUsV2 = () => {
           />
           <div className="absolute inset-0 flex items-center" style={{ background: 'linear-gradient(to right, rgba(0,16,77,0.9), rgba(0,16,77,0.4), transparent)' }}>
             <div className="p-8 lg:p-12 max-w-lg">
-              <h3 className="font-black text-2xl lg:text-3xl text-white mb-3" style={{ fontFamily: 'Montserrat, sans-serif' }}>От среза до вашей двери</h3>
+              <h3 className="font-black text-2xl lg:text-3xl text-white mb-3" style={{ fontFamily: '"Times New Roman", Times, serif' }}>От среза до вашей двери</h3>
               <p className="text-white/70 leading-relaxed">Мы контролируем каждый этап — прямые поставки, холодная цепочка, таможня, доставка.</p>
             </div>
           </div>
@@ -417,7 +417,7 @@ const ContactsV2 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-16" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <span className="inline-block text-blue-300 text-xs font-bold tracking-[0.3em] uppercase mb-4">Контакты</span>
-          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+          <h2 className="font-black text-4xl lg:text-5xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
             Наши представительства
           </h2>
           <div className="w-16 h-1 bg-blue-400 mx-auto mt-6 rounded-full" />
@@ -430,7 +430,7 @@ const ContactsV2 = () => {
               style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)' }}>
               <div className="flex items-center gap-3 mb-5">
                 <div className="w-2.5 h-2.5 rounded-full animate-pulse" style={{ background: '#60a5fa', boxShadow: '0 0 8px #60a5fa, 0 0 16px rgba(96,165,250,0.5)' }} />
-                <h3 className="font-bold text-xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>{item.city}</h3>
+                <h3 className="font-bold text-xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>{item.city}</h3>
               </div>
               <div className="space-y-2 mb-6">
                 <div className="flex items-start gap-2 text-white/60 text-sm">
@@ -457,7 +457,7 @@ const ContactsV2 = () => {
             style={{ background: 'rgba(255,255,255,0.06)', backdropFilter: 'blur(16px)', border: '1px solid rgba(255,255,255,0.12)' }}>
             <div className="flex items-center gap-3 mb-5">
               <div className="w-2.5 h-2.5 rounded-full" style={{ background: 'linear-gradient(135deg, #f97316, #ec4899)', boxShadow: '0 0 8px rgba(236,72,153,0.5)' }} />
-              <h3 className="font-bold text-xl text-white" style={{ fontFamily: 'Montserrat, sans-serif' }}>Instagram</h3>
+              <h3 className="font-bold text-xl text-white" style={{ fontFamily: '"Times New Roman", Times, serif' }}>Instagram</h3>
             </div>
             <div className="flex items-center gap-2 text-white/60 text-sm mb-6">
               <InstagramIcon />
@@ -497,7 +497,7 @@ const CtaV2 = () => {
       </div>
 
       <motion.div className="max-w-3xl mx-auto px-4 text-center relative z-10" initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
-        <h2 className="font-black text-3xl lg:text-5xl text-white mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>
+        <h2 className="font-black text-3xl lg:text-5xl text-white mb-4" style={{ fontFamily: '"Times New Roman", Times, serif' }}>
           Готовы начать сотрудничество?
         </h2>
         <p className="text-white/60 text-lg mb-10">
@@ -561,7 +561,7 @@ const FooterV2 = () => (
 const V2 = () => (
   <LanguageProvider>
     <SEO title="ArtFlowers — Крупнейший поставщик цветов в Казахстане" description="Свежесрезанные цветы и растения с собственной транспортно-логистической компанией" canonical="/v2" />
-    <div className="min-h-screen" style={{ background: '#00104d', color: '#fff', fontFamily: 'Inter, sans-serif' }}>
+    <div className="min-h-screen" style={{ background: '#00104d', color: '#fff', fontFamily: '"Times New Roman", Times, serif' }}>
       <NavV2 />
       <HeroV2 />
       <AboutV2 />

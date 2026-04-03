@@ -3,13 +3,13 @@ const AboutBlack = () => {
     <section id="about" className="py-12 md:py-20 bg-[#0047BB]">
       <div className="container mx-auto px-4 lg:px-8 max-w-4xl">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
             О компании
           </h2>
         </div>
 
         {/* Text Content */}
-        <div className="space-y-5 text-white/80 text-sm md:text-base lg:text-lg leading-relaxed text-center">
+        <div className="space-y-6 text-white/90 text-base md:text-lg lg:text-xl leading-relaxed text-center">
           <p>
             <span className="font-semibold text-white">ArtFlowers</span> — крупнейший поставщик свежесрезанных цветов
             и indoor/outdoor растений в Казахстане с собственной транспортно-логистической компанией.
