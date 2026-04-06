@@ -405,10 +405,10 @@ const WhyUsV2 = () => {
 /* ─── Contacts ─── */
 const ContactsV2 = () => {
   const cities = [
-    { city: 'Алматы', address: '6-й микрорайон, 11', phone: '+7 (771) 751-51-41', whatsapp: '77717515141' },
+    { city: 'Алматы', address: '6-й микрорайон, 11', phone: '+7 (777) 899-79-78', whatsapp: '77778997978' },
     { city: 'Уральск', address: 'ул. Сырима Датова 3/5', phone: '+7 (771) 020-00-99', whatsapp: '77710200099' },
     { city: 'Астана', address: 'пр. Тауелсіздік 19', phone: '+7 (705) 720-55-33', whatsapp: '77057205533' },
-    { city: 'Усть-Каменогорск', address: 'пр. Шакарима 24', phone: '+7 (708) 803-01-95', whatsapp: '77088030195' },
+    { city: 'Усть-Каменогорск', address: 'пр. Шакарима 24', phone: '+7 (706) 664-80-18', whatsapp: '77066648018' },
     { city: 'Актау', address: '28 микрорайон, 54', phone: '+7 (701) 420-08-58', whatsapp: '77014200858' },
   ];
 
@@ -542,7 +542,7 @@ const FooterV2 = () => (
             className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition-all">
             <InstagramIcon />
           </a>
-          <a href="https://wa.me/77717515141" target="_blank" rel="noopener noreferrer"
+          <a href="https://wa.me/77778997978" target="_blank" rel="noopener noreferrer"
             className="w-10 h-10 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white/20 transition-all">
             <WhatsAppIcon />
           </a>
