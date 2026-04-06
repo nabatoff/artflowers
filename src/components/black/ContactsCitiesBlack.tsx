@@ -15,7 +15,6 @@ const InstagramIcon = () => (
 const ContactsCitiesBlack = () => {
   const cities = [
     { city: "Алматы", address: "6-й микрорайон, 11", phone: "+7 (777) 899-79-78", whatsapp: "77778997978" },
-    { city: "Уральск", address: "ул. Сырыма Датова 3/5", phone: "+7 (771) 020-00-99", whatsapp: "77710200099" },
     { city: "Астана", address: "пр. Тауелсиздик 19", phone: "+7 (705) 720-55-33", whatsapp: "77057205533" },
     { city: "Усть-Каменогорск", address: "пр. Шакарима 24", phone: "+7 (706) 664-80-18", whatsapp: "77066648018" },
     { city: "Актау", address: "28 микрорайон, 54", phone: "+7 (701) 420-08-58", whatsapp: "77014200858" },
