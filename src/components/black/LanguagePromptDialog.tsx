@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -20,21 +19,16 @@ const choices: { code: Language; label: string; sub: string; badge: string }[] =
 ];
 
 /**
- * При запуске лендинга (раз на сессию вкладки) — выбор языка; дальше — переключатель в шапке.
+ * Выбор языка: автоматически при первом заходе за сессию; с шапки — та же модалка.
  */
 const LanguagePromptDialog = () => {
-  const { setLanguage } = useLanguage();
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    try {
-      if (!sessionStorage.getItem(SESSION_KEY)) {
-        setOpen(true);
-      }
-    } catch {
-      setOpen(true);
-    }
-  }, []);
+  const {
+    setLanguage,
+    languagePickerOpen,
+    setLanguagePickerOpen,
+    languagePickerForceChoice,
+    setLanguagePickerForceChoice,
+  } = useLanguage();
 
   const pick = (lang: Language) => {
     setLanguage(lang);
@@ -43,20 +37,37 @@ const LanguagePromptDialog = () => {
     } catch {
       /* ignore */
     }
-    setOpen(false);
+    setLanguagePickerForceChoice(false);
+    setLanguagePickerOpen(false);
+  };
+
+  const handleOpenChange = (next: boolean) => {
+    if (!next && languagePickerForceChoice) {
+      return;
+    }
+    setLanguagePickerOpen(next);
+    if (!next) {
+      setLanguagePickerForceChoice(false);
+    }
   };
 
   return (
-    <Dialog open={open} onOpenChange={() => {}} modal>
+    <Dialog open={languagePickerOpen} onOpenChange={handleOpenChange} modal>
       <DialogContent
         className={cn(
           'z-[10050] max-w-[min(100vw-1.5rem,40rem)] gap-0 overflow-hidden border-0 bg-transparent p-0 shadow-none',
           '[&>button]:hidden',
           'data-[state=open]:zoom-in-95 data-[state=closed]:zoom-out-95'
         )}
-        onPointerDownOutside={(e) => e.preventDefault()}
-        onEscapeKeyDown={(e) => e.preventDefault()}
-        onInteractOutside={(e) => e.preventDefault()}
+        onPointerDownOutside={(e) => {
+          if (languagePickerForceChoice) e.preventDefault();
+        }}
+        onEscapeKeyDown={(e) => {
+          if (languagePickerForceChoice) e.preventDefault();
+        }}
+        onInteractOutside={(e) => {
+          if (languagePickerForceChoice) e.preventDefault();
+        }}
       >
         <div
           className={cn(
@@ -65,7 +76,6 @@ const LanguagePromptDialog = () => {
             'ring-1 ring-white/10'
           )}
         >
-          {/* лёгкая «текстура» */}
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.07]"
             style={{

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, MessageCircle, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Dialog,
@@ -34,7 +34,7 @@ const LangButton = ({ code, label }: { code: Language; label: string }) => {
 
 const HeaderBlack = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t } = useLanguage();
+  const { t, openLanguagePicker } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -54,8 +54,8 @@ const HeaderBlack = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0047BB]/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex h-14 items-center justify-between md:h-16">
-          <div className="flex items-center">
+        <div className="flex h-14 items-center justify-between gap-2 md:h-16">
+          <div className="flex min-w-0 flex-1 items-center md:flex-none">
             <img
               src={logoArtflowers}
               alt="Art Flowers"
@@ -145,24 +145,29 @@ const HeaderBlack = () => {
             </Dialog>
           </div>
 
-          <button
-            type="button"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-white md:hidden"
-            aria-expanded={isMenuOpen}
-            aria-label="Menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="flex shrink-0 items-center gap-1 md:hidden">
+            <button
+              type="button"
+              onClick={() => openLanguagePicker()}
+              className="rounded-lg p-2.5 text-white transition-colors hover:bg-white/10"
+              aria-label={t.af.header.langButtonAria}
+            >
+              <Languages className="h-6 w-6" strokeWidth={2} />
+            </button>
+            <button
+              type="button"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="rounded-lg p-2 text-white"
+              aria-expanded={isMenuOpen}
+              aria-label="Menu"
+            >
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {isMenuOpen && (
           <div className="border-t border-white/20 py-4 md:hidden">
-            <div className="mb-3 flex justify-center gap-0.5 rounded-md border border-white/30 bg-white/10 p-0.5">
-              <LangButton code="ru" label={t.af.lang.ru} />
-              <LangButton code="kz" label={t.af.lang.kz} />
-              <LangButton code="en" label={t.af.lang.en} />
-            </div>
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <button
@@ -174,31 +179,6 @@ const HeaderBlack = () => {
                   {item.label}
                 </button>
               ))}
-              <div className="mx-4 mt-2 flex flex-col gap-2">
-                <a
-                  href="tel:+77077515144"
-                  className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-white"
-                >
-                  <Phone className="h-4 w-4 text-white" />
-                  +7 (707) 751-51-44
-                </a>
-                <a
-                  href="tel:+77715257082"
-                  className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-white"
-                >
-                  <Phone className="h-4 w-4 text-white" />
-                  +7 (771) 525-70-82
-                </a>
-                <a
-                  href="https://wa.me/77077515144"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 rounded-lg bg-green-600 py-3 px-4 text-white hover:bg-green-700"
-                >
-                  <MessageCircle className="h-4 w-4" />
-                  WhatsApp
-                </a>
-              </div>
             </nav>
           </div>
         )}

@@ -131,6 +131,7 @@ export const translations = {
         contactUsTitle: 'Свяжитесь с нами',
         call: 'Позвонить',
         writeWhatsapp: 'Написать в WhatsApp',
+        langButtonAria: 'Выбрать язык сайта',
       },
       hero: {
         line1: 'КРУПНЕЙШИЙ',
@@ -356,6 +357,7 @@ export const translations = {
         contactUsTitle: 'Get in touch',
         call: 'Call',
         writeWhatsapp: 'Message on WhatsApp',
+        langButtonAria: 'Choose site language',
       },
       hero: {
         line1: 'THE LARGEST',
@@ -580,6 +582,7 @@ export const translations = {
         contactUsTitle: 'Бізбен байланысыңыз',
         call: 'Қоңырау шалу',
         writeWhatsapp: 'WhatsApp-қа жазу',
+        langButtonAria: 'Сайт тілін таңдау',
       },
       hero: {
         line1: 'ЕҢ ІРІ',
