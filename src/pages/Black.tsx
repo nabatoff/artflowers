@@ -8,6 +8,7 @@ import LogisticsBlack from '@/components/black/LogisticsBlack';
 import ContactsCitiesBlack from '@/components/black/ContactsCitiesBlack';
 import CooperationFormBlack from '@/components/black/CooperationFormBlack';
 import FooterBlack from '@/components/black/FooterBlack';
+import LanguagePromptDialog from '@/components/black/LanguagePromptDialog';
 import ScrollToTop from '@/components/ScrollToTop';
 import SEO from '@/components/SEO';
 
@@ -16,6 +17,7 @@ const BlackContent = () => {
 
   return (
     <>
+      <LanguagePromptDialog />
       <SEO
         title={t.af.seo.title}
         description={t.af.seo.description}
