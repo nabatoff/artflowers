@@ -8,7 +8,7 @@ const AboutBlack = () => {
           </h2>
         </div>
 
-        <div className="w-full max-w-3xl mx-auto space-y-6 md:space-y-8 text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed text-center">
+        <div className="w-full max-w-4xl mx-auto space-y-6 md:space-y-8 text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed text-left md:text-justify">
           <p>
             <span className="font-semibold text-white">ArtFlowers</span> — крупнейший поставщик свежесрезанных цветов
             и indoor/outdoor растений в Казахстане с собственной транспортно-логистической компанией.
