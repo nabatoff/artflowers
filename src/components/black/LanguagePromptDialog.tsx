@@ -9,6 +9,7 @@ import {
 import { useLanguage } from '@/contexts/LanguageContext';
 import type { Language } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
+import logoArtflowers from '@/assets/logo-artflowers-blue.png';
 
 const SESSION_KEY = 'artflowers-lang-prompt-seen';
 
@@ -77,9 +78,13 @@ const LanguagePromptDialog = () => {
               <DialogDescription className="sr-only">
                 Выберите язык интерфейса сайта ArtFlowers
               </DialogDescription>
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.35em] text-white/55 sm:text-xs">
-                ArtFlowers
-              </p>
+              <div className="flex justify-center">
+                <img
+                  src={logoArtflowers}
+                  alt="ArtFlowers"
+                  className="h-10 w-auto brightness-0 invert sm:h-12 md:h-14"
+                />
+              </div>
               <DialogTitle className="text-2xl font-bold uppercase leading-tight tracking-wide text-white sm:text-3xl md:text-4xl">
                 Язык сайта
               </DialogTitle>
