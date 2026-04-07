@@ -1,33 +1,24 @@
-const AboutBlack = () => {
-  return (
-    <section id="about" className="py-12 md:py-20 bg-[#0047BB]">
-      <div className="container mx-auto px-4 lg:px-8 flex flex-col items-center">
-        <div className="text-center mb-8 md:mb-12 w-full">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
-            О компании
-          </h2>
-        </div>
+import { useLanguage } from '@/contexts/LanguageContext';
 
-        <div className="w-full max-w-4xl mx-auto space-y-6 md:space-y-8 text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed text-left md:text-justify">
-          <p>
-            <span className="font-semibold text-white">ArtFlowers</span> — крупнейший поставщик свежесрезанных цветов
-            и indoor/outdoor растений в Казахстане с собственной транспортно-логистической компанией.
-          </p>
-          <p>
-            <span className="font-semibold text-white">Более 17 лет</span> мы поставляем людям свежесть и красоту в виде
-            большого ассортимента качественных цветов и растений.
-          </p>
-          <p>
-            С годами наша компания стала ключевым игроком в цветочной индустрии, устанавливая прочные партнёрства
-            с крупнейшими производителями{" "}
-            <span className="font-semibold text-white">
-              Нидерландов, Китая, Эквадора, Кении, Колумбии, Малайзии
-            </span>{" "}
-            и других стран.
-          </p>
-          <p>
-            Эти партнёрства обеспечивают нам доступ к широкому ассортименту высококачественных цветов и растений.
-          </p>
+const AboutBlack = () => {
+  const { t } = useLanguage();
+
+  return (
+    <section id="about" className="bg-[#0047BB] py-12 md:py-20">
+      <div className="container mx-auto max-w-5xl px-4 lg:px-8">
+        <div className="rounded-xl border border-white/20 bg-white/10 p-6 md:p-8 lg:p-10">
+          <div className="mb-6 text-center md:mb-8">
+            <h2 className="inline-block border-b-2 border-white/40 pb-2 text-3xl font-bold uppercase tracking-wide text-white md:text-4xl lg:text-5xl">
+              {t.af.about.title}
+            </h2>
+          </div>
+
+          <div className="mx-auto max-w-4xl space-y-6 text-left text-lg leading-relaxed text-white/90 md:space-y-8 md:text-xl md:text-justify lg:text-2xl">
+            <p>{t.af.about.p1}</p>
+            <p>{t.af.about.p2}</p>
+            <p>{t.af.about.p3}</p>
+            <p>{t.af.about.p4}</p>
+          </div>
         </div>
       </div>
     </section>

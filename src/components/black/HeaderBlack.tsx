@@ -9,94 +9,135 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import logoArtflowers from '@/assets/logo-artflowers-blue.png';
+import { useLanguage } from '@/contexts/LanguageContext';
+import { cn } from '@/lib/utils';
+import type { Language } from '@/lib/i18n';
+
+const LangButton = ({ code, label }: { code: Language; label: string }) => {
+  const { language, setLanguage } = useLanguage();
+  return (
+    <button
+      type="button"
+      onClick={() => setLanguage(code)}
+      className={cn(
+        'min-w-[2.25rem] rounded px-2 py-1 text-xs font-bold uppercase tracking-wide transition-colors',
+        language === code
+          ? 'bg-white text-[#0047BB]'
+          : 'text-white/90 hover:bg-white/15'
+      )}
+      aria-pressed={language === code}
+    >
+      {label}
+    </button>
+  );
+};
 
 const HeaderBlack = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
+      element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
 
   const navItems = [
-    { id: 'about', label: 'О КОМПАНИИ' },
-    { id: 'offers', label: 'ЧТО ПРЕДЛАГАЕМ' },
-    { id: 'why-us', label: 'ПОЧЕМУ МЫ' },
-    { id: 'contacts', label: 'КОНТАКТЫ' },
+    { id: 'about', label: t.af.nav.about },
+    { id: 'offers', label: t.af.nav.offers },
+    { id: 'why-us', label: t.af.nav.whyUs },
+    { id: 'contacts', label: t.af.nav.contacts },
   ];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-[#0047BB]/95 backdrop-blur-sm shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex items-center justify-between h-14 md:h-16">
-          {/* Logo */}
+        <div className="flex h-14 items-center justify-between md:h-16">
           <div className="flex items-center">
-            <img src={logoArtflowers} alt="Art Flowers" className="h-8 md:h-10 lg:h-11 brightness-0 invert" />
+            <img
+              src={logoArtflowers}
+              alt="Art Flowers"
+              className="h-8 md:h-10 lg:h-11 brightness-0 invert"
+            />
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navItems.map(item => (
-              <button 
-                key={item.id} 
-                onClick={() => scrollToSection(item.id)} 
-                className="text-xs font-medium text-white hover:text-white/70 transition-colors tracking-wider"
+          <nav className="hidden items-center gap-6 md:flex">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => scrollToSection(item.id)}
+                className="text-xs font-medium tracking-wider text-white transition-colors hover:text-white/70"
               >
                 {item.label}
               </button>
             ))}
           </nav>
 
-          {/* Contact Button with Popup */}
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-3 md:flex">
+            <div
+              className="flex items-center gap-0.5 rounded-md border border-white/30 bg-white/10 p-0.5"
+              role="group"
+              aria-label="Language"
+            >
+              <LangButton code="ru" label={t.af.lang.ru} />
+              <LangButton code="kz" label={t.af.lang.kz} />
+              <LangButton code="en" label={t.af.lang.en} />
+            </div>
+
             <Dialog>
               <DialogTrigger asChild>
                 <Button
                   variant="outline"
-                  className="!bg-white !text-[#0047BB] border-2 border-white font-bold text-xs md:text-sm uppercase tracking-wider px-4 md:px-6 py-4 md:py-5 hover:!bg-white hover:!text-[#0047BB] active:!bg-white"
+                  className="!bg-white !text-[#0047BB] border-2 border-white px-4 py-4 text-xs font-bold uppercase tracking-wider hover:!bg-white hover:!text-[#0047BB] active:!bg-white md:px-6 md:py-5 md:text-sm"
                 >
-                  Связаться
+                  {t.af.header.contact}
                 </Button>
               </DialogTrigger>
-              <DialogContent className="bg-white border-gray-200 text-gray-900 max-w-sm">
+              <DialogContent className="max-w-sm border-gray-200 bg-white text-gray-900">
                 <DialogHeader>
-                  <DialogTitle className="text-gray-900 text-center text-xl">Свяжитесь с нами</DialogTitle>
+                  <DialogTitle className="text-center text-xl text-gray-900">
+                    {t.af.header.contactUsTitle}
+                  </DialogTitle>
                 </DialogHeader>
                 <div className="space-y-4 pt-4">
-                  {/* Phones */}
-                  <div className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg">
-                    <div className="w-12 h-12 rounded-full bg-[#0047BB]/10 flex items-center justify-center flex-shrink-0">
-                      <Phone className="w-6 h-6 text-[#0047BB]" />
+                  <div className="flex items-center gap-4 rounded-lg bg-gray-50 p-4">
+                    <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#0047BB]/10">
+                      <Phone className="h-6 w-6 text-[#0047BB]" />
                     </div>
                     <div>
-                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">Позвонить</p>
-                      <a href="tel:+77077515144" className="text-gray-900 font-semibold hover:text-[#0047BB] transition-colors block">
+                      <p className="mb-1 text-xs uppercase tracking-wider text-gray-500">
+                        {t.af.header.call}
+                      </p>
+                      <a
+                        href="tel:+77077515144"
+                        className="block font-semibold text-gray-900 hover:text-[#0047BB] transition-colors"
+                      >
                         +7 (707) 751-51-44
                       </a>
-                      <a href="tel:+77715257082" className="text-gray-900 font-semibold hover:text-[#0047BB] transition-colors block">
+                      <a
+                        href="tel:+77715257082"
+                        className="block font-semibold text-gray-900 hover:text-[#0047BB] transition-colors"
+                      >
                         +7 (771) 525-70-82
                       </a>
                     </div>
                   </div>
-                  
-                  {/* WhatsApp */}
-                  <a 
-                    href="https://wa.me/77077515144" 
-                    target="_blank" 
+
+                  <a
+                    href="https://wa.me/77077515144"
+                    target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="flex items-center gap-4 rounded-lg bg-gray-50 p-4 transition-colors hover:bg-gray-100"
                   >
-                    <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center">
-                      <MessageCircle className="w-6 h-6 text-green-500" />
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-green-500/10">
+                      <MessageCircle className="h-6 w-6 text-green-500" />
                     </div>
                     <div>
-                      <p className="text-gray-500 text-xs uppercase tracking-wider mb-1">WhatsApp</p>
-                      <p className="text-gray-900 font-semibold">Написать в WhatsApp</p>
+                      <p className="mb-1 text-xs uppercase tracking-wider text-gray-500">WhatsApp</p>
+                      <p className="font-semibold text-gray-900">{t.af.header.writeWhatsapp}</p>
                     </div>
                   </a>
                 </div>
@@ -104,41 +145,57 @@ const HeaderBlack = () => {
             </Dialog>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden p-2 text-white">
+          <button
+            type="button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="p-2 text-white md:hidden"
+            aria-expanded={isMenuOpen}
+            aria-label="Menu"
+          >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
-           <div className="md:hidden py-4 border-t border-white/20">
+          <div className="border-t border-white/20 py-4 md:hidden">
+            <div className="mb-3 flex justify-center gap-0.5 rounded-md border border-white/30 bg-white/10 p-0.5">
+              <LangButton code="ru" label={t.af.lang.ru} />
+              <LangButton code="kz" label={t.af.lang.kz} />
+              <LangButton code="en" label={t.af.lang.en} />
+            </div>
             <nav className="flex flex-col gap-2">
-              {navItems.map(item => (
-                <button 
-                  key={item.id} 
-                  onClick={() => scrollToSection(item.id)} 
-                  className="text-left py-3 px-4 text-white hover:bg-white/10 rounded-lg text-sm"
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => scrollToSection(item.id)}
+                  className="rounded-lg px-4 py-3 text-left text-sm text-white hover:bg-white/10"
                 >
                   {item.label}
                 </button>
               ))}
-              <div className="flex flex-col gap-2 mt-2 mx-4">
-                <a href="tel:+77077515144" className="flex items-center gap-2 py-3 px-4 bg-white/10 rounded-lg text-white">
-                  <Phone className="w-4 h-4 text-white" />
+              <div className="mx-4 mt-2 flex flex-col gap-2">
+                <a
+                  href="tel:+77077515144"
+                  className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-white"
+                >
+                  <Phone className="h-4 w-4 text-white" />
                   +7 (707) 751-51-44
                 </a>
-                <a href="tel:+77715257082" className="flex items-center gap-2 py-3 px-4 bg-white/10 rounded-lg text-white">
-                  <Phone className="w-4 h-4 text-white" />
+                <a
+                  href="tel:+77715257082"
+                  className="flex items-center gap-2 rounded-lg bg-white/10 px-4 py-3 text-white"
+                >
+                  <Phone className="h-4 w-4 text-white" />
                   +7 (771) 525-70-82
                 </a>
-                <a 
-                  href="https://wa.me/77077515144" 
-                  target="_blank" 
+                <a
+                  href="https://wa.me/77077515144"
+                  target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 py-3 px-4 bg-green-600 hover:bg-green-700 rounded-lg text-white"
+                  className="flex items-center gap-2 rounded-lg bg-green-600 py-3 px-4 text-white hover:bg-green-700"
                 >
-                  <MessageCircle className="w-4 h-4" />
+                  <MessageCircle className="h-4 w-4" />
                   WhatsApp
                 </a>
               </div>

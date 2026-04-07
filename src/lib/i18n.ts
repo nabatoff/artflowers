@@ -109,6 +109,123 @@ export const translations = {
       emailPlaceholder: 'Ваш email',
       copyright: '© 2024 ArtTime. Все права защищены.',
     },
+    af: {
+      seo: {
+        title: 'ArtFlowers — Крупнейший поставщик цветов в Казахстане',
+        description:
+          'ArtFlowers — крупнейший поставщик свежесрезанных цветов и растений в Казахстане. 17 лет на рынке, прямые поставки из Эквадора, Кении, Нидерландов и других стран.',
+        keywords:
+          'цветы, свежесрезанные цветы, растения, поставщик цветов, оптовые цветы, Казахстан, ArtFlowers, indoor растения, outdoor растения, цветочная логистика',
+        ogImageAlt: 'ArtFlowers — поставщик цветов в Казахстане',
+        ogLocale: 'ru_RU',
+      },
+      nav: {
+        about: 'О КОМПАНИИ',
+        offers: 'ЧТО ПРЕДЛАГАЕМ',
+        whyUs: 'ПОЧЕМУ МЫ',
+        contacts: 'КОНТАКТЫ',
+      },
+      lang: { ru: 'RU', en: 'EN', kz: 'KZ' },
+      header: {
+        contact: 'Связаться',
+        contactUsTitle: 'Свяжитесь с нами',
+        call: 'Позвонить',
+        writeWhatsapp: 'Написать в WhatsApp',
+      },
+      hero: {
+        line1: 'КРУПНЕЙШИЙ',
+        line2: 'ПОСТАВЩИК',
+        subtitle:
+          'свежесрезанных цветов и растений в Казахстане с собственной транспортно-логистической компанией',
+        cta: 'Оставить заявку',
+      },
+      about: {
+        title: 'О компании',
+        p1:
+          'ArtFlowers — крупнейший поставщик свежесрезанных цветов и indoor/outdoor растений в Казахстане с собственной транспортно-логистической компанией.',
+        p2: 'Более 17 лет мы поставляем людям свежесть и красоту в виде большого ассортимента качественных цветов и растений.',
+        p3:
+          'С годами наша компания стала ключевым игроком в цветочной индустрии, устанавливая прочные партнёрства с крупнейшими производителями Нидерландов, Китая, Эквадора, Кении, Колумбии, Малайзии и других стран.',
+        p4: 'Эти партнёрства обеспечивают нам доступ к широкому ассортименту высококачественных цветов и растений.',
+      },
+      whatWeOffer: {
+        title: 'Мы предлагаем',
+        intro:
+          'Полный цикл сотрудничества «под ключ» с лучшими условиями сотрудничества для цветочников и садоводов Казахстана.',
+        bullet1:
+          'поможем осуществить выбор свежесрезанных цветов, растений (indoor/outdoor), луковичных и другого посадочного материала',
+        bullet2: 'поможем с выбором стендинга и страны-поставщика',
+        bullet3: 'доставим цветы и растения в ваш город',
+        tag1: 'стабильные поставки',
+        tag2: 'гибкие условия',
+        tag3: 'лучший ассортимент',
+      },
+      whyUs: {
+        title: 'Почему нам доверяют',
+        intro:
+          'Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих районов мира — мы контролируем каждый этап от среза до вашей двери.',
+        guarantee: 'Гарантируем стабильность поставок и соблюдение температурного режима',
+        statCountries: 'стран-партнёров',
+        statYears: 'лет на рынке',
+        statTons: 'тонн цветов каждый год',
+        statBranches: 'филиала в Казахстане',
+        statStaff: 'сотрудников',
+      },
+      logistics: {
+        title: 'Лучшие условия по авиа и автологистике',
+        body:
+          'Компания ArtFlowers имеет собственную транспортную компанию, осуществляющую доставку и перевозки товара наших клиентов с соблюдением графика поставок и всеми необходимыми нормами — от документального сопровождения до точного соблюдения температурного режима.',
+        imgAlt: 'Авиа и автологистика ArtFlowers',
+      },
+      contacts: {
+        title: 'Контакты',
+        instagramTitle: 'Instagram',
+        instagramSubtitle: '@artflowers.kazakhstan',
+        subscribe: 'Подпишитесь, чтобы узнавать новости первыми!',
+        instagramBtn: 'Instagram',
+        whatsapp: 'WhatsApp',
+        city1: { name: 'Алматы', address: '6-й микрорайон, 11' },
+        city2: { name: 'Астана', address: 'пр. Тауелсиздик 19' },
+        city3: { name: 'Усть-Каменогорск', address: 'пр. Шакарима 24' },
+      },
+      form: {
+        title: 'Предложение о сотрудничестве',
+        name: 'Имя *',
+        phone: 'Номер телефона *',
+        comment: 'Комментарий (необязательно)',
+        submit: 'Отправить предложение',
+        waName: 'Имя',
+        waPhone: 'Телефон',
+        waComment: 'Комментарий',
+      },
+      footer: {
+        copyright: 'Artflowers © 2024. Все права защищены.',
+        offer: 'Публичная оферта',
+        offerTitle: 'Публичная оферта',
+        offerP1:
+          'Настоящий Договор публичной оферты (далее – Оферта) адресован физическим и юридическим лицам (далее – Покупатель) и определяет условия оказания услуг, представленных на сайте https://art-flowers.kz (далее – Сайт).',
+        offerH1: '1. Общие положения',
+        offerP2:
+          '1.1. Данная Оферта является публичным договором в соответствии со статьей 395 Гражданского кодекса Республики Казахстан.',
+        offerP3: '1.2. Поставщик услуг – ИП Floral Express, ИИН 840703401219, адрес: 6-й микрорайон, 11.',
+        offerP4:
+          '1.3. Заказчик – лицо, совершившее обращение к Поставщику услуг через формы обратной связи на Сайте, по телефону или в мессенджерах, и выразившее намерение заказать услугу.',
+        offerP5:
+          '1.4. Принятием (акцептом) условий настоящей Оферты является оформление заявки любым доступным способом: через кнопку связи на Сайте, по телефону или в мессенджере WhatsApp. С момента подтверждения заказа и/или произведения оплаты Заказчик считается согласившимся со всеми условиями Оферты.',
+        offerH2: '2. Порядок оформления заказа',
+        offerP6:
+          '2.1. Информация об услугах на Сайте носит ознакомительный характер. Перечень, объём, технические характеристики, сроки оказания услуг и их итоговая стоимость согласовываются Сторонами индивидуально в ходе консультации через средства связи (WhatsApp, телефон).',
+        offerP7:
+          '2.2. Заказ считается принятым в работу только после его подтверждения менеджером и получения оплаты/предоплаты.',
+        offerH3: '3. Ответственность и персональные данные',
+        offerP8:
+          '3.1. Оставляя заявку на Сайте или в мессенджере, Покупатель даёт согласие на обработку персональных данных для исполнения Заказа.',
+        offerH4: '4. Контакты',
+        offerP9:
+          '4.1. По всем вопросам, жалобам и предложениям обращаться по электронной почте: l.kurlovich@artflowers.kz',
+      },
+      scroll: { toTop: 'Наверх', toTopAria: 'Наверх', toContacts: 'К контактам', toContactsAria: 'Контакты' },
+    },
   },
   en: {
     nav: {
@@ -218,6 +335,122 @@ export const translations = {
       emailPlaceholder: 'Your email',
       copyright: '© 2024 ArtTime. All rights reserved.',
     },
+    af: {
+      seo: {
+        title: 'ArtFlowers — Leading flower supplier in Kazakhstan',
+        description:
+          'ArtFlowers is the largest supplier of fresh-cut flowers and plants in Kazakhstan. 17 years on the market, direct supplies from Ecuador, Kenya, the Netherlands and more.',
+        keywords:
+          'flowers, fresh cut flowers, plants, flower supplier, wholesale flowers, Kazakhstan, ArtFlowers, indoor plants, outdoor plants, floral logistics',
+        ogImageAlt: 'ArtFlowers — flower supplier in Kazakhstan',
+        ogLocale: 'en_US',
+      },
+      nav: {
+        about: 'ABOUT',
+        offers: 'WHAT WE OFFER',
+        whyUs: 'WHY US',
+        contacts: 'CONTACTS',
+      },
+      lang: { ru: 'RU', en: 'EN', kz: 'KZ' },
+      header: {
+        contact: 'Contact us',
+        contactUsTitle: 'Get in touch',
+        call: 'Call',
+        writeWhatsapp: 'Message on WhatsApp',
+      },
+      hero: {
+        line1: 'THE LARGEST',
+        line2: 'SUPPLIER',
+        subtitle:
+          'of fresh-cut flowers and plants in Kazakhstan with our own transport and logistics company',
+        cta: 'Send a request',
+      },
+      about: {
+        title: 'About us',
+        p1:
+          'ArtFlowers is the largest supplier of fresh-cut flowers and indoor/outdoor plants in Kazakhstan, with its own transportation and logistics company.',
+        p2:
+          'For over 17 years we have been bringing freshness and beauty through a wide range of quality flowers and plants.',
+        p3:
+          'Over time our company has become a key player in the floral industry, building strong partnerships with leading growers in the Netherlands, China, Ecuador, Kenya, Colombia, Malaysia and other countries.',
+        p4: 'These partnerships give us access to a broad range of high-quality flowers and plants.',
+      },
+      whatWeOffer: {
+        title: 'What we offer',
+        intro:
+          'A full turnkey cooperation cycle with the best terms for florists and horticultural businesses across Kazakhstan.',
+        bullet1:
+          'We help you choose fresh-cut flowers, indoor/outdoor plants, bulbs and other planting material',
+        bullet2: 'We help you choose standing displays and supplier countries',
+        bullet3: 'We deliver flowers and plants to your city',
+        tag1: 'reliable supply',
+        tag2: 'flexible terms',
+        tag3: 'best assortment',
+      },
+      whyUs: {
+        title: 'Why clients trust us',
+        intro:
+          'Our own fleet, representative offices nationwide and direct supplies from the world’s leading flower-growing regions — we control every step from the cut to your door.',
+        guarantee: 'We guarantee stable supplies and temperature-controlled handling',
+        statCountries: 'partner countries',
+        statYears: 'years on the market',
+        statTons: 'tons of flowers per year',
+        statBranches: 'branches in Kazakhstan',
+        statStaff: 'employees',
+      },
+      logistics: {
+        title: 'Best terms for air and road logistics',
+        body:
+          'ArtFlowers has its own transport company that delivers and carries our clients’ goods on schedule and in full compliance — from documentation to strict temperature control.',
+        imgAlt: 'Air and road logistics — ArtFlowers',
+      },
+      contacts: {
+        title: 'Contacts',
+        instagramTitle: 'Instagram',
+        instagramSubtitle: '@artflowers.kazakhstan',
+        subscribe: 'Follow us for the latest news!',
+        instagramBtn: 'Instagram',
+        whatsapp: 'WhatsApp',
+        city1: { name: 'Almaty', address: '6th microdistrict, 11' },
+        city2: { name: 'Astana', address: 'Tauelsizdik Ave. 19' },
+        city3: { name: 'Oskemen (Ust-Kamenogorsk)', address: 'Shakarim Ave. 24' },
+      },
+      form: {
+        title: 'Partnership inquiry',
+        name: 'Name *',
+        phone: 'Phone number *',
+        comment: 'Comment (optional)',
+        submit: 'Send proposal',
+        waName: 'Name',
+        waPhone: 'Phone',
+        waComment: 'Comment',
+      },
+      footer: {
+        copyright: 'Artflowers © 2024. All rights reserved.',
+        offer: 'Public offer',
+        offerTitle: 'Public offer (terms)',
+        offerP1:
+          'This public offer agreement (the “Offer”) is addressed to individuals and legal entities (the “Customer”) and sets out the terms of services presented on https://art-flowers.kz (the “Site”).',
+        offerH1: '1. General provisions',
+        offerP2:
+          '1.1. This Offer constitutes a public agreement under Article 395 of the Civil Code of the Republic of Kazakhstan.',
+        offerP3: '1.2. Service provider — IE Floral Express, IIN 840703401219, address: 6th microdistrict, 11.',
+        offerP4:
+          '1.3. Customer — any person who contacts the provider via the Site, by phone or messengers and expresses an intent to order a service.',
+        offerP5:
+          '1.4. Acceptance of this Offer is submitting a request by any available means: Site contact button, phone or WhatsApp. Once the order is confirmed and/or paid, the Customer is deemed to have accepted all terms.',
+        offerH2: '2. Order process',
+        offerP6:
+          '2.1. Information on the Site is for reference only. Scope, specifications, timelines and final price are agreed individually during consultation (WhatsApp, phone).',
+        offerP7: '2.2. An order is accepted only after confirmation by a manager and payment/prepayment.',
+        offerH3: '3. Liability and personal data',
+        offerP8:
+          '3.1. By submitting a request on the Site or in a messenger, the Customer consents to processing personal data to fulfil the order.',
+        offerH4: '4. Contacts',
+        offerP9: '4.1. For questions and feedback: l.kurlovich@artflowers.kz',
+      },
+      scroll: { toTop: 'Back to top', toTopAria: 'Back to top', toContacts: 'Contacts', toContactsAria: 'Go to contacts' },
+    },
   },
   kz: {
     nav: {
@@ -326,6 +559,123 @@ export const translations = {
       newsletter: 'Жаңалықтарға жазылу',
       emailPlaceholder: 'Сіздің email',
       copyright: '© 2024 ArtTime. Барлық құқықтар қорғалған.',
+    },
+    af: {
+      seo: {
+        title: 'ArtFlowers — Қазақстандағы ең ірі гүл жеткізушісі',
+        description:
+          'ArtFlowers — Қазақстанда қиысталған гүлдер мен өсімдіктердің ең ірі жеткізушісі. Нарықта 17 жыл, Эквадор, Кения, Нидерландтар және басқа елдерден тікелей жеткізу.',
+        keywords:
+          'гүлдер, қиысталған гүлдер, өсімдіктер, гүл жеткізушісі, қолма-қол гүлдер, Қазақстан, ArtFlowers, ғимарат ішіндегі өсімдіктер, гүл логистикасы',
+        ogImageAlt: 'ArtFlowers — Қазақстандағы гүл жеткізушісі',
+        ogLocale: 'kk_KZ',
+      },
+      nav: {
+        about: 'КОМПАНИЯ ТУРАЛЫ',
+        offers: 'НЕ ҰСЫНАМЫЗ',
+        whyUs: 'НЕЛІКТЕН БІЗ',
+        contacts: 'БАЙЛАНЫС',
+      },
+      lang: { ru: 'RU', en: 'EN', kz: 'KZ' },
+      header: {
+        contact: 'Байланысу',
+        contactUsTitle: 'Бізбен байланысыңыз',
+        call: 'Қоңырау шалу',
+        writeWhatsapp: 'WhatsApp-қа жазу',
+      },
+      hero: {
+        line1: 'ЕҢ ІРІ',
+        line2: 'ЖЕТКІЗУШІ',
+        subtitle:
+          'Қазақстандағы қиысталған гүлдер мен өсімдіктер — өз көлік-логистикалық компаниямызбен',
+        cta: 'Өтінім қалдыру',
+      },
+      about: {
+        title: 'Компания туралы',
+        p1:
+          'ArtFlowers — Қазақстанда қиысталған гүлдер мен indoor/outdoor өсімдіктердің ең ірі жеткізушісі, өз көлік-логистикалық компаниясы бар.',
+        p2:
+          '17 жылдан астам уақыт бойы біз адамдарға сапалы гүлдер мен өсімдіктердің кең ассортименті арқылы жаңалық пен сұлулық әкелеміз.',
+        p3:
+          'Уақыт өте келе компаниямыз гүл шаруашылығында маңызды ойыншыға айналып, Нидерланд, Қытай, Эквадор, Кения, Колумбия, Малайзия және басқа елдердің ірі өндірушілерімен берік серіктестік орнатқан.',
+        p4: 'Бұл серіктестіктер жоғары сапалы гүлдер мен өсімдіктердің кең ассортиментіне қол жеткізуге мүмкіндік береді.',
+      },
+      whatWeOffer: {
+        title: 'Біз ұсынамыз',
+        intro:
+          'Қазақстандағы гүл өсірушілер және бақшашылар үшін ең жақсы шарттармен «кілтін тапсыру» толық циклін.',
+        bullet1:
+          'қиысталған гүлдер, өсімдіктерді (indoor/outdoor), сондықтар мен басқа отырғызу материалдарын таңдауда көмектесеміз',
+        bullet2: 'стендинг пен жеткізуші елді таңдауда көмектесеміз',
+        bullet3: 'гүлдер мен өсімдіктерді сіздің қалаңызға жеткіземіз',
+        tag1: 'тұрақты жеткізу',
+        tag2: 'икемді шарттар',
+        tag3: 'ең жақсы ассортимент',
+      },
+      whyUs: {
+        title: 'Неліктен бізге сенеді',
+        intro:
+          'Өз автопаркіміз, ел бойынша өкілдіктеріміз және әлемнің жетекші гүл өсіру аудандарынан тікелей жеткізу — біз қиырудан сіздің есік алдыңызға дейінгі әр кезеңді бақылаймыз.',
+        guarantee: 'Жеткізудің тұрақтылығын және температурлық режимді сақтауды кепілдейміз',
+        statCountries: 'серіктес ел',
+        statYears: 'жыл нарықта',
+        statTons: 'тонна гүл (жылына)',
+        statBranches: 'ҚР-дағы филиал',
+        statStaff: 'қызметкер',
+      },
+      logistics: {
+        title: 'Авиа және автожол логистикасы бойынша ең жақсы шарттар',
+        body:
+          'ArtFlowers компаниясында өз көлік компаниясы бар, ол жеткізу кестесін сақтай отырып, клиенттеріміздің тауарын жеткізеді және тасымалдайды — құжаттамадан температурлық режимді нақты сақтауға дейінгі барлық нормалармен.',
+        imgAlt: 'Авиа және автологистика ArtFlowers',
+      },
+      contacts: {
+        title: 'Байланыс',
+        instagramTitle: 'Instagram',
+        instagramSubtitle: '@artflowers.kazakhstan',
+        subscribe: 'Жаңалықтарды бірінші боп білу үшін жазылыңыз!',
+        instagramBtn: 'Instagram',
+        whatsapp: 'WhatsApp',
+        city1: { name: 'Алматы', address: '6-шыша мөлтек аудан, 11' },
+        city2: { name: 'Астана', address: 'Тәуелсіздік даңғылы 19' },
+        city3: { name: 'Өскемен', address: 'Шәкәрім даңғылы 24' },
+      },
+      form: {
+        title: 'Серіктестік ұсынысы',
+        name: 'Аты-жөні *',
+        phone: 'Телефон нөмірі *',
+        comment: 'Пікір (міндетті емес)',
+        submit: 'Ұсынысты жіберу',
+        waName: 'Аты',
+        waPhone: 'Телефон',
+        waComment: 'Пікір',
+      },
+      footer: {
+        copyright: 'Artflowers © 2024. Барлық құқықтар қорғалған.',
+        offer: 'Жария оферта',
+        offerTitle: 'Жария оферта',
+        offerP1:
+          'Осы жария оферта шарты (бұдан әрі – Оферта) жеке және заңды тұлғаларға (бұдан әрі – Сатып алушы) бағытталған және https://art-flowers.kz сайтында көрсетілген қызметтердің шарттарын анықтайды (бұдан әрі – Сайт).',
+        offerH1: '1. Жалпы ережелер',
+        offerP2:
+          '1.1. Бұл Оферта Қазақстан Республикасы Азamatтық кодексінің 395-бабына сәйкес жария шарт болып табылады.',
+        offerP3: '1.2. Қызмет көрсетуші – ЖК Floral Express, ЖСН 840703401219, мекенжайы: 6-шы мөлтек аудан, 11.',
+        offerP4:
+          '1.3. Тапсырыс беруші – Сайтта, телефон немесе мессенджерлер арқылы қызмет көрсетушіге жүгініп, қызмет тапсырыс беру ниетін білдірген тұлға.',
+        offerP5:
+          '1.4. Осы Офертаны қабылдау – Сайттағы байланыс батырмасы, телефон немесе WhatsApp арқылы өтінім қалдыру. Тапсырыс расталған және/немесе төленген сәттен бастап Тапсырыс беруші барлық шарттармен келіседі деп есептеледі.',
+        offerH2: '2. Тапсырыс реті',
+        offerP6:
+          '2.1. Сайттағы ақпарат таныстыру сипатындағы. Тізім, көлем, техникалық сипаттама, мерзімдер және қорытынды баға тараптармен кеңесу кезінде жеке келісіледі (WhatsApp, телефон).',
+        offerP7:
+          '2.2. Тапсырыс тек менеджер растағаннан және төлем алынғаннан кейін қабылданады.',
+        offerH3: '3. Жауапкершілік және жеке деректер',
+        offerP8:
+          '3.1. Сайтта немесе мессенджерде өтінім қалдыра отырып, Сатып алушы тапсырысты орындау үшін жеке деректерді өңдеуге келісім береді.',
+        offerH4: '4. Байланыс',
+        offerP9: '4.1. Сұрақтар және ұсыныстар: l.kurlovich@artflowers.kz',
+      },
+      scroll: { toTop: 'Жоғары', toTopAria: 'Жоғарыға', toContacts: 'Байланысқа', toContactsAria: 'Байланыс бөліміне' },
     },
   },
 } as const;

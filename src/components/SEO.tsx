@@ -5,6 +5,8 @@ interface SEOProps {
   description?: string;
   keywords?: string;
   ogImage?: string;
+  ogImageAlt?: string;
+  ogLocale?: string;
   ogType?: string;
   canonical?: string;
   noIndex?: boolean;
@@ -17,6 +19,8 @@ const SEO = ({
   description = 'ArtFlowers — крупнейший поставщик свежесрезанных цветов и растений в Казахстане. 17 лет на рынке, прямые поставки из Эквадора, Кении, Нидерландов и других стран.',
   keywords = 'цветы, свежесрезанные цветы, растения, поставщик цветов, оптовые цветы, Казахстан, ArtFlowers, indoor растения, outdoor растения, цветочная логистика',
   ogImage = '/og-image.png',
+  ogImageAlt = 'ArtFlowers — Поставщик цветов в Казахстане',
+  ogLocale = 'ru_RU',
   ogType = 'website',
   canonical,
   noIndex = false,
@@ -78,11 +82,11 @@ const SEO = ({
     updateMetaTag('og:image', fullOgImage, true);
     updateMetaTag('og:image:width', '1200', true);
     updateMetaTag('og:image:height', '630', true);
-    updateMetaTag('og:image:alt', 'ArtFlowers — Поставщик цветов в Казахстане', true);
+    updateMetaTag('og:image:alt', ogImageAlt, true);
     updateMetaTag('og:type', ogType, true);
     updateMetaTag('og:url', canonicalUrl, true);
     updateMetaTag('og:site_name', 'ArtFlowers', true);
-    updateMetaTag('og:locale', 'ru_RU', true);
+    updateMetaTag('og:locale', ogLocale, true);
 
     // Twitter Card tags
     updateMetaTag('twitter:card', 'summary_large_image');
@@ -93,7 +97,7 @@ const SEO = ({
     // Canonical link
     updateLinkTag('canonical', canonicalUrl);
 
-  }, [title, description, keywords, ogImage, ogType, canonical, noIndex]);
+  }, [title, description, keywords, ogImage, ogImageAlt, ogLocale, ogType, canonical, noIndex]);
 
   return null;
 };

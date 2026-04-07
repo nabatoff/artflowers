@@ -1,38 +1,43 @@
+import { useLanguage } from '@/contexts/LanguageContext';
+
 const WhyTrustUsBlack = () => {
+  const { t } = useLanguage();
   const stats = [
-    { value: "15+", label: "стран-партнёров" },
-    { value: "18", label: "лет на рынке" },
-    { value: "3500+", label: "тонн цветов каждый год" },
-    { value: "4", label: "филиала в Казахстане" },
-    { value: "100+", label: "сотрудников" },
+    { value: '15+', label: t.af.whyUs.statCountries },
+    { value: '18', label: t.af.whyUs.statYears },
+    { value: '3500+', label: t.af.whyUs.statTons },
+    { value: '4', label: t.af.whyUs.statBranches },
+    { value: '100+', label: t.af.whyUs.statStaff },
   ];
 
   return (
-    <section id="why-us" className="py-12 md:py-20 bg-[#0047BB]">
-      <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
-        <div className="text-center mb-6 md:mb-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
-            Почему нам доверяют
-          </h2>
-        </div>
-        <p className="text-white/90 text-center text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
-          Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих районов мира - мы контролируем каждый этап от среза до Вашей двери.
-        </p>
-
-        <div className="max-w-3xl mx-auto mb-10 md:mb-14">
-          <div className="bg-white/10 border border-white/25 rounded-md px-5 py-3 text-center text-white font-semibold text-sm md:text-base uppercase tracking-wider">
-            Гарантируем стабильность поставок и соблюдение температурного режима
+    <section id="why-us" className="bg-[#0047BB] py-12 md:py-20">
+      <div className="container mx-auto max-w-5xl px-4 lg:px-8">
+        <div className="rounded-xl border border-white/20 bg-white/10 p-6 md:p-8 lg:p-10">
+          <div className="mb-6 text-center md:mb-8">
+            <h2 className="inline-block border-b-2 border-white/40 pb-2 text-3xl font-bold uppercase tracking-wide text-white md:text-4xl lg:text-5xl">
+              {t.af.whyUs.title}
+            </h2>
           </div>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
-          {stats.map((item, i) => (
-            <div key={i} className="text-center">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
-                {item.value}
-              </div>
-              <div className="text-white/90 text-lg md:text-xl lg:text-2xl">{item.label}</div>
+          <p className="mx-auto mb-10 max-w-3xl text-center text-lg leading-relaxed text-white/90 md:mb-12 md:text-xl lg:text-2xl">
+            {t.af.whyUs.intro}
+          </p>
+
+          <div className="mx-auto mb-10 max-w-3xl md:mb-14">
+            <div className="rounded-lg border border-white/25 bg-white/[0.12] px-5 py-4 text-center text-sm font-semibold uppercase leading-snug tracking-wider text-white md:text-base">
+              {t.af.whyUs.guarantee}
             </div>
-          ))}
+          </div>
+          <div className="grid grid-cols-2 gap-6 md:gap-8 lg:grid-cols-3 xl:grid-cols-5">
+            {stats.map((item, i) => (
+              <div key={i} className="text-center">
+                <div className="mb-1 text-3xl font-bold text-white md:mb-2 md:text-4xl lg:text-5xl">
+                  {item.value}
+                </div>
+                <div className="text-lg text-white/90 md:text-xl lg:text-2xl">{item.label}</div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { LanguageProvider } from '@/contexts/LanguageContext';
+import { LanguageProvider, useLanguage } from '@/contexts/LanguageContext';
 import HeaderBlack from '@/components/black/HeaderBlack';
 import HeroBlack from '@/components/black/HeroBlack';
 import AboutBlack from '@/components/black/AboutBlack';
@@ -11,12 +11,17 @@ import FooterBlack from '@/components/black/FooterBlack';
 import ScrollToTop from '@/components/ScrollToTop';
 import SEO from '@/components/SEO';
 
-const Black = () => {
+const BlackContent = () => {
+  const { t } = useLanguage();
+
   return (
-    <LanguageProvider>
-      <SEO 
-        title="ArtFlowers — Крупнейший поставщик цветов в Казахстане"
-        description="ArtFlowers — крупнейший поставщик свежесрезанных цветов и растений в Казахстане. 17 лет на рынке, прямые поставки из Эквадора, Кении, Нидерландов и других стран."
+    <>
+      <SEO
+        title={t.af.seo.title}
+        description={t.af.seo.description}
+        keywords={t.af.seo.keywords}
+        ogImageAlt={t.af.seo.ogImageAlt}
+        ogLocale={t.af.seo.ogLocale}
         canonical="/"
       />
       <div className="min-h-screen bg-[#0047BB]">
@@ -33,6 +38,14 @@ const Black = () => {
         <FooterBlack />
         <ScrollToTop />
       </div>
+    </>
+  );
+};
+
+const Black = () => {
+  return (
+    <LanguageProvider>
+      <BlackContent />
     </LanguageProvider>
   );
 };
