@@ -12,9 +12,11 @@ const LogisticsBlack = () => {
           </h2>
         </div>
 
-        <p className="mx-auto max-w-3xl text-center text-lg leading-relaxed text-white/90 md:text-xl lg:text-2xl">
-          {t.af.logistics.body}
-        </p>
+        <div className="mx-auto max-w-3xl rounded-xl border border-white/20 bg-white/10 p-6 md:p-8 lg:p-10">
+          <p className="text-center text-lg leading-relaxed text-white/90 md:text-xl lg:text-2xl">
+            {t.af.logistics.body}
+          </p>
+        </div>
       </div>
     </section>
   );
