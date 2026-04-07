@@ -4,6 +4,7 @@ import HeroBlack from '@/components/black/HeroBlack';
 import AboutBlack from '@/components/black/AboutBlack';
 import WhatWeOfferBlack from '@/components/black/WhatWeOfferBlack';
 import WhyTrustUsBlack from '@/components/black/WhyTrustUsBlack';
+import LogisticsBlack from '@/components/black/LogisticsBlack';
 import ContactsCitiesBlack from '@/components/black/ContactsCitiesBlack';
 import CooperationFormBlack from '@/components/black/CooperationFormBlack';
 import FooterBlack from '@/components/black/FooterBlack';
@@ -25,6 +26,7 @@ const Black = () => {
           <AboutBlack />
           <WhatWeOfferBlack />
           <WhyTrustUsBlack />
+          <LogisticsBlack />
           <ContactsCitiesBlack />
           <CooperationFormBlack />
         </main>

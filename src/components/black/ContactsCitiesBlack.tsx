@@ -36,7 +36,7 @@ const ContactsCitiesBlack = () => {
               key={i}
               className="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors flex flex-col"
             >
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.city}</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3 text-center">{item.city}</h3>
               <div className="flex items-start gap-2 text-white/90 text-lg md:text-xl lg:text-2xl mb-2">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-1 text-white/70" />
                 <span>{item.address}</span>

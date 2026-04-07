@@ -12,11 +12,32 @@ const WhatWeOfferBlack = () => {
             Полный цикл сотрудничества "под ключ" с лучшими условиями сотрудничества для цветочников и садоводов Казахстана.
           </p>
 
-          <div className="space-y-3 text-white/90 text-base md:text-lg lg:text-xl leading-relaxed">
-            <p>* поможем осуществить выбор свежесрезанных цветов, растений (indoor/outdoor), луковичных и другого посадочного материала</p>
-            <p>* поможем с выбором стендинга и страны - поставщика;</p>
-            <p>* доставим цветы и растения в Ваш город</p>
-          </div>
+          <ul className="space-y-3 text-white/90 text-base md:text-lg lg:text-xl leading-relaxed">
+            <li className="flex items-start gap-3">
+              <span className="mt-1 text-emerald-300">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                  <path fillRule="evenodd" d="M16.704 5.29a1 1 0 010 1.42l-7.25 7.25a1 1 0 01-1.414 0l-3.25-3.25a1 1 0 111.414-1.42l2.543 2.544 6.543-6.544a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span>поможем осуществить выбор свежесрезанных цветов, растений (indoor/outdoor), луковичных и другого посадочного материала</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 text-emerald-300">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                  <path fillRule="evenodd" d="M16.704 5.29a1 1 0 010 1.42l-7.25 7.25a1 1 0 01-1.414 0l-3.25-3.25a1 1 0 111.414-1.42l2.543 2.544 6.543-6.544a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span>поможем с выбором стендинга и страны - поставщика;</span>
+            </li>
+            <li className="flex items-start gap-3">
+              <span className="mt-1 text-emerald-300">
+                <svg viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
+                  <path fillRule="evenodd" d="M16.704 5.29a1 1 0 010 1.42l-7.25 7.25a1 1 0 01-1.414 0l-3.25-3.25a1 1 0 111.414-1.42l2.543 2.544 6.543-6.544a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
+              </span>
+              <span>доставим цветы и растения в Ваш город</span>
+            </li>
+          </ul>
 
           <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="text-center bg-white/15 border border-white/25 rounded-md py-3 px-4 text-white font-semibold text-sm md:text-base">

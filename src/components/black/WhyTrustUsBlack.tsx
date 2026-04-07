@@ -18,6 +18,12 @@ const WhyTrustUsBlack = () => {
         <p className="text-white/90 text-center text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
           Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих районов мира - мы контролируем каждый этап от среза до Вашей двери.
         </p>
+
+        <div className="max-w-3xl mx-auto mb-10 md:mb-14">
+          <div className="bg-white/10 border border-white/25 rounded-md px-5 py-3 text-center text-white font-semibold text-sm md:text-base uppercase tracking-wider">
+            Гарантируем стабильность поставок и соблюдение температурного режима
+          </div>
+        </div>
         <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
           {stats.map((item, i) => (
             <div key={i} className="text-center">

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowUp, Phone } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
@@ -16,7 +16,6 @@ const WhatsAppIcon = ({ className }: { className?: string }) => (
 );
 
 const WHATSAPP_NUMBER = '77077515144';
-const PHONE_NUMBER = '+77077515144';
 
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,12 +40,11 @@ const ScrollToTop = () => {
     });
   };
 
-  const openWhatsApp = () => {
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}`, '_blank');
-  };
-
-  const callPhone = () => {
-    window.location.href = `tel:${PHONE_NUMBER}`;
+  const scrollToContacts = () => {
+    const contacts = document.getElementById('contacts');
+    if (contacts) {
+      contacts.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -94,44 +92,21 @@ const ScrollToTop = () => {
           <Tooltip>
             <TooltipTrigger asChild>
               <Button
-                onClick={openWhatsApp}
+                onClick={scrollToContacts}
                 size="icon"
                 variant="outline"
                 className="relative rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg !bg-white !text-[#0047BB] hover:!bg-white border-white/50 touch-manipulation"
-                aria-label="WhatsApp"
+                aria-label="Контакты"
               >
                 <WhatsAppIcon className="w-6 h-6 sm:w-7 sm:h-7 text-[#0047BB]" />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="left" className="hidden sm:block">
-              <p>Написать в WhatsApp</p>
+              <p>К контактам</p>
             </TooltipContent>
           </Tooltip>
         </motion.div>
 
-        {/* Phone - всегда видна */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: 0.2 }}
-        >
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Button
-                onClick={callPhone}
-                size="icon"
-                variant="outline"
-                className="rounded-full w-12 h-12 sm:w-14 sm:h-14 shadow-lg !bg-white !text-[#0047BB] hover:!bg-white border-white/50 touch-manipulation"
-                aria-label="Позвонить"
-              >
-                <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
-              </Button>
-            </TooltipTrigger>
-            <TooltipContent side="left" className="hidden sm:block">
-              <p>Позвонить</p>
-            </TooltipContent>
-          </Tooltip>
-        </motion.div>
       </div>
     </TooltipProvider>
   );
