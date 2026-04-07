@@ -28,7 +28,7 @@ const WhatWeOfferBlack = () => {
     <section id="offers" className="py-12 md:py-20 bg-[#003399]">
       <div className="container mx-auto px-4 lg:px-8 max-w-5xl">
         <div className="text-center mb-10 md:mb-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white uppercase tracking-wide pb-2 border-b-2 border-white/40 inline-block">
             Что предлагаем
           </h2>
         </div>
@@ -41,8 +41,8 @@ const WhatWeOfferBlack = () => {
               <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-4">
                 <item.icon className="w-6 h-6 text-white" strokeWidth={1.5} />
               </div>
-              <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-              <p className="text-white/70 text-sm md:text-base leading-relaxed">{item.description}</p>
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">{item.title}</h3>
+              <p className="text-white/90 text-lg md:text-xl lg:text-2xl leading-relaxed">{item.description}</p>
             </div>
           ))}
         </div>
