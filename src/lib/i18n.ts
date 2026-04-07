@@ -175,7 +175,6 @@ export const translations = {
         title: 'Лучшие условия по авиа и автологистике',
         body:
           'Компания ArtFlowers имеет собственную транспортную компанию, осуществляющую доставку и перевозки товара наших клиентов с соблюдением графика поставок и всеми необходимыми нормами — от документального сопровождения до точного соблюдения температурного режима.',
-        imgAlt: 'Авиа и автологистика ArtFlowers',
       },
       contacts: {
         title: 'Контакты',
@@ -402,7 +401,6 @@ export const translations = {
         title: 'Best terms for air and road logistics',
         body:
           'ArtFlowers has its own transport company that delivers and carries our clients’ goods on schedule and in full compliance — from documentation to strict temperature control.',
-        imgAlt: 'Air and road logistics — ArtFlowers',
       },
       contacts: {
         title: 'Contacts',
@@ -627,7 +625,6 @@ export const translations = {
         title: 'Авиа және автожол логистикасы бойынша ең жақсы шарттар',
         body:
           'ArtFlowers компаниясында өз көлік компаниясы бар, ол жеткізу кестесін сақтай отырып, клиенттеріміздің тауарын жеткізеді және тасымалдайды — құжаттамадан температурлық режимді нақты сақтауға дейінгі барлық нормалармен.',
-        imgAlt: 'Авиа және автологистика ArtFlowers',
       },
       contacts: {
         title: 'Байланыс',
