@@ -1,9 +1,10 @@
 const WhyTrustUsBlack = () => {
   const stats = [
-    { value: "15+", label: "собственных машин" },
-    { value: "12+", label: "представительств по Казахстану" },
-    { value: "8+", label: "стран поставок" },
-    { value: "500+", label: "тонн цветов в год" },
+    { value: "15+", label: "стран-партнёров" },
+    { value: "18", label: "лет на рынке" },
+    { value: "3500+", label: "тонн цветов каждый год" },
+    { value: "4", label: "филиала в Казахстане" },
+    { value: "100+", label: "сотрудников" },
   ];
 
   return (
@@ -15,9 +16,9 @@ const WhyTrustUsBlack = () => {
           </h2>
         </div>
         <p className="text-white/90 text-center text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed">
-          Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих регионов мира — мы контролируем каждый этап от среза до вашей двери.
+          Собственный автопарк, представительства по всей стране и прямые поставки из ведущих цветоводческих районов мира - мы контролируем каждый этап от среза до Вашей двери.
         </p>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 md:gap-8">
           {stats.map((item, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">

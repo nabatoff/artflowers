@@ -34,13 +34,12 @@ const HeroBlack = () => {
       {/* Content — bottom-left like reference */}
       <div className="absolute z-10 top-[66%] md:top-1/2 -translate-y-1/2 left-6 md:left-16 lg:left-24 max-w-3xl">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] tracking-tight">
-          Крупнейший
-          <br />поставщик
+          КРУПНЕЙШИЙ
+          <br />ПОСТАВЩИК
         </h1>
 
-        <p className="text-white/80 text-base sm:text-lg md:text-2xl mt-3 md:mt-4 leading-relaxed">
-          <span className="block">свежесрезанных цветов и растений в Казахстане</span>
-          <span className="block">с собственной транспортно-логистической компанией</span>
+        <p className="text-white/85 text-lg sm:text-xl md:text-2xl mt-3 md:mt-4 leading-relaxed max-w-[24ch] md:max-w-2xl text-left">
+          свежесрезанных цветов и растений в Казахстане с собственной транспортно-логистической компанией
         </p>
 
         <Button

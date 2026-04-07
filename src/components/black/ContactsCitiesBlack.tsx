@@ -61,23 +61,28 @@ const ContactsCitiesBlack = () => {
             </div>
           ))}
 
-          {/* Instagram */}
-          <div className="bg-white/10 rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-colors flex flex-col">
-            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">Instagram</h3>
+        </div>
+
+        <div className="mt-8 md:mt-10 max-w-3xl mx-auto">
+          <div className="bg-white/10 rounded-xl p-7 md:p-9 border border-white/20 hover:bg-white/15 transition-colors text-center flex flex-col items-center">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Instagram</h3>
             <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-white font-medium hover:text-white/80 mb-4 text-lg md:text-xl lg:text-2xl"
+              className="text-white font-medium hover:text-white/80 mb-3 text-xl md:text-2xl"
             >
               @artflowers.kazakhstan
             </a>
+            <p className="text-white/90 text-lg md:text-xl lg:text-2xl mb-5">
+              Подпишитесь, чтобы узнавать новости первыми!
+            </p>
             <a
               href={instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-auto flex items-center justify-center gap-2 w-full py-3 px-4 rounded-md font-semibold text-white text-base md:text-lg shadow-sm transition-opacity hover:opacity-90"
-              style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}
+              className="flex items-center justify-center gap-2 min-w-[240px] py-3 px-6 rounded-md font-semibold text-white text-lg md:text-xl shadow-sm transition-opacity hover:opacity-90"
+              style={{ background: "linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)" }}
             >
               <InstagramIcon />
               Instagram
