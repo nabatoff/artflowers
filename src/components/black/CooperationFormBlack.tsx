@@ -4,7 +4,8 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const WHATSAPP_NUMBER = '77077515144';
+/** WhatsApp Алматы (согласовано с контактами city1) */
+const WHATSAPP_NUMBER = '77778997978';
 
 const CooperationFormBlack = () => {
   const { t } = useLanguage();
