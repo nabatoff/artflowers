@@ -34,7 +34,9 @@ const LangButton = ({ code, label }: { code: Language; label: string }) => {
 
 const HeaderBlack = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, openLanguagePicker } = useLanguage();
+  const { t, openLanguagePicker, language } = useLanguage();
+  const currentLangLabel =
+    language === 'ru' ? t.af.lang.ru : language === 'kz' ? t.af.lang.kz : t.af.lang.en;
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -149,10 +151,11 @@ const HeaderBlack = () => {
             <button
               type="button"
               onClick={() => openLanguagePicker()}
-              className="rounded-lg p-2.5 text-white transition-colors hover:bg-white/10"
+              className="flex items-center gap-1.5 rounded-lg border border-white/35 bg-white/10 px-2.5 py-2 text-white transition-colors hover:bg-white/20"
               aria-label={t.af.header.langButtonAria}
             >
-              <Languages className="h-6 w-6" strokeWidth={2} />
+              <Languages className="h-4 w-4 shrink-0 opacity-90" strokeWidth={2} aria-hidden />
+              <span className="text-xs font-bold uppercase tracking-wide">{currentLangLabel}</span>
             </button>
             <button
               type="button"
