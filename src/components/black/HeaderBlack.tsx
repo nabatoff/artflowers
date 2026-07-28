@@ -114,10 +114,10 @@ const HeaderBlack = () => {
                         {t.af.header.call}
                       </p>
                       <a
-                        href="tel:+77077515144"
+                        href="tel:+77775215321"
                         className="block font-semibold text-gray-900 hover:text-[#0047BB] transition-colors"
                       >
-                        +7 (707) 751-51-44
+                        +7 (777) 521-53-21
                       </a>
                       <a
                         href="tel:+77715257082"
@@ -129,7 +129,7 @@ const HeaderBlack = () => {
                   </div>
 
                   <a
-                    href="https://wa.me/77077515144"
+                    href="https://wa.me/77775215321"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-4 rounded-lg bg-gray-50 p-4 transition-colors hover:bg-gray-100"

@@ -15,7 +15,7 @@ const ContactBlack = () => {
       return;
     }
     const whatsappMessage = `Имя: ${encodeURIComponent(formData.name)}%0AТелефон: ${encodeURIComponent(formData.phone)}%0AСообщение: ${encodeURIComponent(formData.message)}`;
-    window.open(`https://wa.me/77077515144?text=${whatsappMessage}`, '_blank');
+    window.open(`https://wa.me/77775215321?text=${whatsappMessage}`, '_blank');
   };
   return <section id="contact" className="py-12 md:py-16 bg-gray-50">
       <div className="container mx-auto px-4 lg:px-8">
@@ -57,8 +57,8 @@ const ContactBlack = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-xs uppercase tracking-wider mb-1">Телефон</p>
-                  <a href="tel:+77077515144" className="text-gray-900 hover:text-[#0047BB] transition-colors block">
-                    +7 (707) 751-51-44
+                  <a href="tel:+77775215321" className="text-gray-900 hover:text-[#0047BB] transition-colors block">
+                    +7 (777) 521-53-21
                   </a>
                   <a href="tel:+77715257082" className="text-gray-900 hover:text-[#0047BB] transition-colors block">
                     +7 (771) 525-70-82
