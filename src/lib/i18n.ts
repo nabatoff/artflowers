@@ -187,6 +187,7 @@ export const translations = {
         city1: { name: 'Алматы', address: '6-й микрорайон, 11' },
         city2: { name: 'Астана', address: 'пр. Тауелсиздик 19' },
         city3: { name: 'Усть-Каменогорск', address: 'пр. Шакарима 24' },
+        city4: { name: 'Уральск', address: 'ул. Сырыма Датова 3/5' },
       },
       form: {
         title: 'Предложение о сотрудничестве',
@@ -414,6 +415,7 @@ export const translations = {
         city1: { name: 'Almaty', address: '6th microdistrict, 11' },
         city2: { name: 'Astana', address: 'Tauelsizdik Ave. 19' },
         city3: { name: 'Oskemen (Ust-Kamenogorsk)', address: 'Shakarim Ave. 24' },
+        city4: { name: 'Uralsk', address: 'Syrym Datov St. 3/5' },
       },
       form: {
         title: 'Partnership inquiry',
@@ -640,6 +642,7 @@ export const translations = {
         city1: { name: 'Алматы', address: '6-шы шағын аудан, 11 үй' },
         city2: { name: 'Астана', address: 'Тәуелсіздік даңғылы, 19 үй' },
         city3: { name: 'Өскемен', address: 'Шәкәрім даңғылы, 24 үй' },
+        city4: { name: 'Орал', address: 'Сырым Датов көшесі, 3/5' },
       },
       form: {
         title: 'Серіктестік ұсынысы',
