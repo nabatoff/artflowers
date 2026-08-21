@@ -15,16 +15,23 @@ const InstagramIcon = () => (
 
 const PHONES = [
   { phone: '+7 (777) 899-79-78', whatsapp: '77778997978' },
+  { phone: '+7 (771) 020-00-99', whatsapp: '77710200099' },
   { phone: '+7 (705) 720-55-33', whatsapp: '77057205533' },
   { phone: '+7 (706) 664-80-18', whatsapp: '77066648018' },
 ] as const;
 
 const ContactsCitiesBlack = () => {
   const { t } = useLanguage();
-  const cities = [t.af.contacts.city1, t.af.contacts.city2, t.af.contacts.city3].map((c, i) => ({
+  const cities = [
+    t.af.contacts.city1,
+    t.af.contacts.city4,
+    t.af.contacts.city2,
+    t.af.contacts.city3,
+  ].map((c, i) => ({
     ...c,
     ...PHONES[i],
   }));
+
 
   const instagramUrl = 'https://www.instagram.com/artflowers.kazakhstan/';
 
